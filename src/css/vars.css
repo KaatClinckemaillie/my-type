@@ -1,10 +1,7 @@
 :root {
-  --colorLightest: white;
-  --colorText: #211f1f;
-  --colorMain: #f9d2cb;
-  --colorSecondary: #a3f4dc;
-  --colorGray: #fafafa;
-  --colorGrayDark: #9c9c9c;
+  --colorWhite: white;
+  --colorBlack: #211f1f;
+  --colorAccent: #1dff00;
   --spacerSmall: .75rem; /* 12px */
   --spacerRegular: 1rem; /* 16px */
   --spacerBig: 1.88rem; /* 30px */

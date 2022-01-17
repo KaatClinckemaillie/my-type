@@ -13,6 +13,8 @@ html {
 }
 /* stylelint-enable */
 
+/* GENERAL */
+
 body {
   font-family: var(--font);
 }
@@ -21,19 +23,22 @@ li {
   line-height: 1.8;
 }
 
-.container {
-  width: 60rem;
-  margin: var(--spacerBig) auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .pagetitle {
   font-size: var(--fontBig);
 }
 
-.demo-list {
-  margin-top: var(--spacerBig);
-  text-transform: capitalize;
+.hidden {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__link {
+  color: var(--colorBlack);
+  text-decoration: none;
+  text-align: right;
+  padding: var(--spacerRegular);
 }
