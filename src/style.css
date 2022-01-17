@@ -16,7 +16,8 @@ html {
 /* GENERAL */
 
 body {
-  font-family: var(--font);
+  font-family: var(--fontSecundary);
+  font-weight: var(--fontWeightLight);
 }
 
 li {

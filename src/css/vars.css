@@ -9,7 +9,9 @@
   --fontRegular: 1.13rem; /* 18px */
   --fontMedium: 1.25rem; /* 20px */
   --fontBig: 1.75rem; /* 28px */
-  --font: 'Roboto', sans-serif;
+  --fontPrimary: 'EB Garamond', serif;
+  --fontSecundary: gill-sans-nova, sans-serif;
+  --fontWeightLight: 300;
   --fontWeightRegular: 400;
-  --fontWeightBold: 500;
+  --fontWeightBold: 700;
 }
