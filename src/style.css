@@ -46,3 +46,43 @@ li {
 
 /* HEADER */
 
+.header {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title--text {
+
+
+}
+
+.header__title--small {
+  margin-bottom: -1.7rem;
+  margin-left: .4rem;
+  font-size: 1.5rem;
+}
+
+.header__title--big {
+  font-family: var(--fontPrimary);
+  font-weight: var(--fontWeightRegular);
+  font-size: 5rem;
+}
+
+.header__title--initial {
+  width: 130px;
+  height: 140px;
+}
+
+/* RESPONSIVE PART STARTS HERE */
+
+@media only screen and (min-width: 425px) {
+
+}
+
