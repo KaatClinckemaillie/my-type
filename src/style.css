@@ -59,8 +59,8 @@ li {
 }
 
 .header__title--text {
-
-
+  margin-top: 1rem;
+  margin-left: -.5rem;
 }
 
 .header__title--small {
@@ -82,7 +82,44 @@ li {
 
 /* RESPONSIVE PART STARTS HERE */
 
-@media only screen and (min-width: 425px) {
+@media only screen and (min-width: 768px) {
 
+  .header__title--text {
+    margin-top: 3rem;
+  }
+
+  .header__title--initial {
+    width: 260px;
+    height: 280px;
+  }
+
+  .header__title--big {
+    font-size: 8rem;
+  }
+
+  .header__title--small {
+    font-size: 2.5rem;
+    margin-bottom: -3rem;
+  }
 }
 
+@media only screen and (min-width: 1024px) {
+
+  .header__title--text {
+    margin-top: 2rem;
+  }
+
+  .header__title--initial {
+    width: 335px;
+    height: 360px;
+  }
+
+  .header__title--big {
+    font-size: 15rem;
+  }
+
+  .header__title--small {
+    font-size: 5rem;
+    margin-bottom: -5.5rem;
+  }
+}
