@@ -35,6 +35,7 @@ li {
 .menu {
   display: flex;
   justify-content: flex-end;
+  padding: 1rem;
 }
 
 .menu__link {
@@ -50,6 +51,21 @@ li {
   height: 100vh;
   width: 100%;
   position: fixed;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.header__canvas {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.header__text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: grid;
+  place-content: center;
 }
 
 .header__title {
@@ -80,6 +96,12 @@ li {
   height: 140px;
 }
 
+.header__title--cta {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1rem;
+}
+
 /* RESPONSIVE PART STARTS HERE */
 
 @media only screen and (min-width: 768px) {
@@ -101,6 +123,10 @@ li {
     font-size: 2.5rem;
     margin-bottom: -3rem;
   }
+
+  .header__title--cta {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -121,5 +147,9 @@ li {
   .header__title--small {
     font-size: 5rem;
     margin-bottom: -5.5rem;
+  }
+
+  .header__title--cta {
+    font-size: 2rem;
   }
 }

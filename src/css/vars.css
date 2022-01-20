@@ -2,13 +2,9 @@
   --colorWhite: white;
   --colorBlack: #211f1f;
   --colorAccent: #1dff00;
-  --spacerSmall: .75rem; /* 12px */
-  --spacerRegular: 1rem; /* 16px */
-  --spacerBig: 1.88rem; /* 30px */
-  --fontSmall: .75rem; /* 12px */
-  --fontRegular: 1.13rem; /* 18px */
-  --fontMedium: 1.25rem; /* 20px */
-  --fontBig: 1.75rem; /* 28px */
+  --s-0: 1rem;
+  --s-1: 1.5rem;
+  --s-2: 2rem;
   --fontPrimary: 'EB Garamond', serif;
   --fontSecundary: gill-sans-nova, sans-serif;
   --fontWeightLight: 300;
