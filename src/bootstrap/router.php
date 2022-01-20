@@ -4,6 +4,10 @@ $routes = array(
   'home' => array(
     'controller' => 'Pages',
     'action' => 'index'
+  ),
+  'api-letters' => array(
+    'controller' => 'Pages',
+    'action' => 'apiLetters'
   )
 );
 

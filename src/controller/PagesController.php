@@ -7,11 +7,14 @@ require_once __DIR__ . '/../model/Letter.php';
 class PagesController extends Controller {
 
   public function index() {
-    // this should refer to a database query, a hard-coded object is used for demo purposes
-    //$demos = Demo::all();
+    $letters = Letter::all();
+    $this->set('letters',$letters);
 
-    //$demos = array(new Demo('first item'), new Demo('second item'), new Demo('last item'));
-    //$this->set('demos',$demos);
+  }
 
+  public function apiLetters() {
+    $letters = Letter::all();
+    echo json_encode($letters);
+    exit();
   }
 }
