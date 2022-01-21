@@ -1,3 +1,5 @@
+import Letter from './classes/Letter.js';
+
 const $canvasHeader = document.querySelector('.header__canvas');
 const ctx = $canvasHeader.getContext('2d');
 
