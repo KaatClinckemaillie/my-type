@@ -1,18 +1,19 @@
 import Vector from './Vector';
-import {random} from '../functions/lib.js';
+import {random, cellAmountLetter} from '../functions/lib.js';
 
 class Letter {
-  constructor($canvas, letter) {
+  constructor($canvas, letter, position) {
     this.$canvas = $canvas;
     this.ctx = this.$canvas.getContext('2d');
     this.letter = letter;
-    this.x = random(1, this.$canvas.width);
-    this.y = random(1, this.$canvas.height);
-    this.location = new Vector(this.x, this.y);
+    this.position = position;
+    this.locationX = this.position.x * ($canvas.width / cellAmountLetter);
+    this.locationY = this.position.y * ($canvas.height / cellAmountLetter);
   }
 
   draw() {
-    this.ctx.fillText(this.letter, this.location.x, this.location.y);
+    this.ctx.font = `${random(30, 60)}px EB Garamond`;
+    this.ctx.fillText(this.letter, this.locationX, this.locationY);
   }
 }
 

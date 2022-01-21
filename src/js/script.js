@@ -1,8 +1,11 @@
 import Letter from './classes/Letter.js';
+import Vector from './classes/Vector.js';
+import {random, cellAmountLetter} from './functions/lib.js';
 
 const $canvasHeader = document.querySelector('.header__canvas');
 const letters = [];
 const movingLetters = [];
+const lettersPositions = [];
 
 /* const animate = () => {
   //ctx.clearRect(0, 0, $canvasHeader.width, $canvasHeader.height);
@@ -11,10 +14,24 @@ const movingLetters = [];
   //requestAnimationFrame(animate);
 }; */
 
+const pickCoordinateLetter = () => {
+  let letterPosition = new Vector(random(1, cellAmountLetter), random(1, cellAmountLetter));
+
+  // check if position is already used + margin
+  while (lettersPositions.some(item => item.x === letterPosition.x && item.y === letterPosition.y)) {
+    letterPosition = new Vector(random(1, cellAmountLetter), random(1, cellAmountLetter));
+  }
+  console.log(letterPosition);
+  lettersPositions.push(letterPosition);
+  return letterPosition;
+
+};
+
 const showLetters = () => {
-  letters.forEach(letter => movingLetters.push(new Letter($canvasHeader, letter)));
+  letters.forEach(letter => movingLetters.push(new Letter($canvasHeader, letter, pickCoordinateLetter())));
   console.log(movingLetters);
   movingLetters.forEach(letter => letter.draw());
+  console.log(lettersPositions);
 };
 
 const getLetters = async () => {
@@ -26,6 +43,7 @@ const getLetters = async () => {
   console.log(letters);
   //animate();
   showLetters();
+  //pickCoordinateLetterX();
 };
 
 const resizeWindow = () => {

@@ -4,5 +4,9 @@
  * @param {number} maximum - the maximum value excluded
  */
 export const random = (min = 0, max = 1) => {
-  return Math.random() * (max - min) + min;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
 };
+
+export const cellAmountLetter = 25;
