@@ -42,9 +42,32 @@ const getLetters = async () => {
   data.forEach(item => letters.push(item.letter));
   console.log(letters);
   //animate();
-  showLetters();
+  //showLetters();
   //pickCoordinateLetterX();
+
+  createGridItems();
 };
+
+const createGridItems = () => {
+  shuffle(letters);
+
+};
+
+const shuffle = array => {
+  let currentIndex = array.length, randomIndex;
+
+  //while there remain elements to shuffle...
+  while (currentIndex !== 0) {
+    // Pick a remaining element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex --;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+  return array;
+};
+
 
 const resizeWindow = () => {
   $canvasHeader.setAttribute('height', window.innerHeight);
@@ -53,6 +76,6 @@ const resizeWindow = () => {
 
 export const init = () => {
   console.log('start executing this JavaScript');
-  resizeWindow();
+  //resizeWindow();
   getLetters();
 };

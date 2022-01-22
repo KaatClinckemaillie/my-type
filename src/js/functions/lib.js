@@ -9,4 +9,4 @@ export const random = (min = 0, max = 1) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-export const cellAmountLetter = 25;
+export const cellAmountLetter = 18;

@@ -1,4 +1,4 @@
-import Vector from './Vector';
+/* import Vector from './Vector';
 import {random, cellAmountLetter} from '../functions/lib.js';
 
 class Letter {
@@ -12,9 +12,9 @@ class Letter {
   }
 
   draw() {
-    this.ctx.font = `${random(30, 60)}px EB Garamond`;
+    this.ctx.font = `${random(30, 60)}pt EB Garamond`;
     this.ctx.fillText(this.letter, this.locationX, this.locationY);
   }
 }
 
-export default Letter;
+export default Letter; */

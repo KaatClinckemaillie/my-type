@@ -1,7 +1,7 @@
 <section class="content">
   <div class="header">
-    <canvas class="header__canvas"></canvas>
-    <div class="header__text">
+<!--     <canvas class="header__canvas"></canvas> -->
+<!--     <div class="header__text"> -->
       <div class="header__title">
         <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="335" height="360" viewBox="0 0 335.988 361">
           <g id="initial" transform="translate(0 -59.702)">
@@ -48,7 +48,11 @@
         </div>
       </div>
       <p class="header__title--cta">Scroll to delve into Bembo</p>
-    </div>
+      <div class="letter">a</div>
+      <div class="letter">b</div>
+      <div class="letter"></div>
+      <div class="letter">c</div>
+<!--     </div> -->
 
   </div>
   <section class="chapter">
