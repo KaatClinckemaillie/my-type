@@ -2,6 +2,9 @@ import Letter from './classes/Letter.js';
 import Vector from './classes/Vector.js';
 import {random, cellAmountLetter} from './functions/lib.js';
 
+const $header = document.querySelector('.header');
+const amountNeededCells = 67; // grid of 7 x 11, so 91 cells, 24 cells are already in use, so 67 cells are left;
+
 const $canvasHeader = document.querySelector('.header__canvas');
 const letters = [];
 const movingLetters = [];
@@ -27,12 +30,12 @@ const pickCoordinateLetter = () => {
 
 };
 
-const showLetters = () => {
+/* const showLetters = () => {
   letters.forEach(letter => movingLetters.push(new Letter($canvasHeader, letter, pickCoordinateLetter())));
   console.log(movingLetters);
   movingLetters.forEach(letter => letter.draw());
   console.log(lettersPositions);
-};
+}; */
 
 const getLetters = async () => {
   console.log('Start loading the JSON file');
@@ -45,12 +48,26 @@ const getLetters = async () => {
   //showLetters();
   //pickCoordinateLetterX();
 
-  createGridItems();
+  createGridElements();
 };
 
-const createGridItems = () => {
-  shuffle(letters);
+const createGridElements = () => {
+  const elements = [];
 
+  // first add al the letters
+  letters.forEach(letter => elements.push(`<div class="letter">${letter}</div>`));
+
+  // add empty divs, so that Elements has a length of 67
+  const emptyCells = amountNeededCells - elements.length;
+  for (let i = 0;i < emptyCells;i ++) {
+    elements.push(`<div class="letter"></div>`);
+  }
+
+  showLetters(elements);
+};
+
+const showLetters = elements => {
+  shuffle(elements).forEach(element => $header.innerHTML += element);
 };
 
 const shuffle = array => {
