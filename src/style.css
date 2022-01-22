@@ -214,7 +214,6 @@ li {
     font-size: 1.5rem;
   }
 
-
 }
 
 @media only screen and (min-width: 1024px) {
@@ -265,7 +264,7 @@ li {
   }
 
   .header__letter--xl {
-    font-size: 5rem;
+    font-size: 8rem;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
