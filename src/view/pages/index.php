@@ -1,5 +1,5 @@
 <section class="content">
-  <div class="header">
+  <div class="header zoom">
 <!--     <canvas class="header__canvas"></canvas> -->
 <!--     <div class="header__text"> -->
       <div class="header__title">

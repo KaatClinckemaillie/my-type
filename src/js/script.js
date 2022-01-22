@@ -10,6 +10,10 @@ const letters = [];
 const movingLetters = [];
 const lettersPositions = [];
 
+const zoomElement = document.querySelector('.zoom');
+let zoom = 1;
+let zoomSpeed = 0.5;
+
 /* const animate = () => {
   //ctx.clearRect(0, 0, $canvasHeader.width, $canvasHeader.height);
   letters.forEach(letter => letter.draw());
@@ -97,4 +101,24 @@ export const init = () => {
   console.log('start executing this JavaScript');
   //resizeWindow();
   getLetters();
+
+    document.addEventListener("wheel", e => {
+
+        // don't make zoom smaller than 1
+        if(zoom > 1){
+            if(e.deltaY > 0) {
+                zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
+            }else{
+                zoomElement.style.transform = `scale(${zoom-= zoomSpeed})`;
+            }
+        }else if (zoom == 1){
+            if(e.deltaY > 0){
+                zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
+            }
+
+        }else{
+            zoom = 1;
+        }
+        console.log(zoom);
+    })
 };

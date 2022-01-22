@@ -48,6 +48,7 @@ li {
 /* HEADER */
 
 .header {
+  position: fixed;
   margin-left: 1rem;
   margin-right: 1rem;
   gap: .5rem;
@@ -214,6 +215,25 @@ li {
     font-size: 1.5rem;
   }
 
+  .header__letter--s {
+    font-size: 1rem;
+  }
+
+  .header__letter--m {
+    font-size: 1.5rem;
+  }
+
+  .header__letter--l {
+    font-size: 3rem;
+  }
+
+  .header__letter--xl {
+    font-size: 5rem;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -221,6 +241,7 @@ li {
   .header__title--text {
     margin-top: 3rem;
   }
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -264,9 +285,6 @@ li {
   }
 
   .header__letter--xl {
-    font-size: 8rem;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    font-size: 6rem;
   }
 }
