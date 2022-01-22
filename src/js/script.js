@@ -3,7 +3,7 @@ import Vector from './classes/Vector.js';
 import {random, cellAmountLetter} from './functions/lib.js';
 
 const $header = document.querySelector('.header');
-const amountNeededCells = 67; // grid of 7 x 11, so 91 cells, 24 cells are already in use, so 67 cells are left;
+const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
 
 const $canvasHeader = document.querySelector('.header__canvas');
 const letters = [];
@@ -53,14 +53,16 @@ const getLetters = async () => {
 
 const createGridElements = () => {
   const elements = [];
+  const styleSize = ['s', 'm', 'm', 'm', 'l', 'l', 'l', 'l', 'xl'];
+  const stylePosition = ['tc', 'tl', 'tr', 'bc', 'bl', 'br', 'lc', 'rc', 'c'];
 
-  // first add al the letters
-  letters.forEach(letter => elements.push(`<div class="letter">${letter}</div>`));
+  // first add al the letters plus one empty div
+  letters.forEach(letter => elements.push(`<div class="header__letter header__letter--${stylePosition[random(0, stylePosition.length)]} header__letter--${styleSize[random(0, styleSize.length)]}">${letter}</div>`));
 
   // add empty divs, so that Elements has a length of 67
   const emptyCells = amountNeededCells - elements.length;
   for (let i = 0;i < emptyCells;i ++) {
-    elements.push(`<div class="letter"></div>`);
+    elements.push(`<div></div>`);
   }
 
   showLetters(elements);

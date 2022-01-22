@@ -48,10 +48,6 @@
         </div>
       </div>
       <p class="header__title--cta">Scroll to delve into Bembo</p>
-      <div class="letter">a</div>
-      <div class="letter">b</div>
-      <div class="letter"></div>
-      <div class="letter">c</div>
 <!--     </div> -->
 
   </div>
