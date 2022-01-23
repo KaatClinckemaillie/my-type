@@ -1,18 +1,18 @@
-import Letter from './classes/Letter.js';
-import Vector from './classes/Vector.js';
-import {random, cellAmountLetter} from './functions/lib.js';
+/* import Letter from './classes/Letter.js'; */
+//import Vector from './classes/Vector.js';
+import {random} from './functions/lib.js';
 
 const $header = document.querySelector('.header');
 const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
 
-const $canvasHeader = document.querySelector('.header__canvas');
+/* const $canvasHeader = document.querySelector('.header__canvas'); */
 const letters = [];
-const movingLetters = [];
-const lettersPositions = [];
+/* const movingLetters = []; */
+/* const lettersPositions = []; */
 
 const zoomElement = document.querySelector('.zoom');
 let zoom = 1;
-let zoomSpeed = 0.5;
+const zoomSpeed = 0.5;
 
 /* const animate = () => {
   //ctx.clearRect(0, 0, $canvasHeader.width, $canvasHeader.height);
@@ -21,7 +21,7 @@ let zoomSpeed = 0.5;
   //requestAnimationFrame(animate);
 }; */
 
-const pickCoordinateLetter = () => {
+/* const pickCoordinateLetter = () => {
   let letterPosition = new Vector(random(1, cellAmountLetter), random(1, cellAmountLetter));
 
   // check if position is already used + margin
@@ -32,7 +32,7 @@ const pickCoordinateLetter = () => {
   lettersPositions.push(letterPosition);
   return letterPosition;
 
-};
+}; */
 
 /* const showLetters = () => {
   letters.forEach(letter => movingLetters.push(new Letter($canvasHeader, letter, pickCoordinateLetter())));
@@ -92,33 +92,32 @@ const shuffle = array => {
 };
 
 
-const resizeWindow = () => {
+/* const resizeWindow = () => {
   $canvasHeader.setAttribute('height', window.innerHeight);
   $canvasHeader.setAttribute('width', window.innerWidth);
-};
+}; */
 
 export const init = () => {
   console.log('start executing this JavaScript');
   //resizeWindow();
   getLetters();
 
-    document.addEventListener("wheel", e => {
+  document.addEventListener('wheel', e => {
+    // don't make zoom smaller than 1
+    if (zoom > 1) {
+      if (e.deltaY > 0) {
+        zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
+      } else {
+        zoomElement.style.transform = `scale(${zoom -= zoomSpeed})`;
+      }
+    } else if (zoom === 1) {
+      if (e.deltaY > 0) {
+        zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
+      }
 
-        // don't make zoom smaller than 1
-        if(zoom > 1){
-            if(e.deltaY > 0) {
-                zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
-            }else{
-                zoomElement.style.transform = `scale(${zoom-= zoomSpeed})`;
-            }
-        }else if (zoom == 1){
-            if(e.deltaY > 0){
-                zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
-            }
-
-        }else{
-            zoom = 1;
-        }
-        console.log(zoom);
-    })
+    } else {
+      zoom = 1;
+    }
+    console.log(zoom);
+  });
 };
