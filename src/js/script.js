@@ -1,13 +1,11 @@
 import {random} from './functions/lib.js';
 
-const $header = document.querySelector('.header');
+const $headerBg = document.querySelector('.header__bg');
+
 const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
 
 const letters = [];
 
-const zoomElement = document.querySelector('.zoom');
-let zoom = 1;
-const zoomSpeed = 0.5;
 
 const getLetters = async () => {
   console.log('Start loading the JSON file');
@@ -37,7 +35,7 @@ const createGridElements = () => {
 };
 
 const showLetters = elements => {
-  shuffle(elements).forEach(element => $header.innerHTML += element);
+  shuffle(elements).forEach(element => $headerBg.innerHTML += element);
 };
 
 const shuffle = array => {
@@ -60,23 +58,7 @@ export const init = () => {
   console.log('start executing this JavaScript');
   //resizeWindow();
   getLetters();
+  //document.addEventListener('wheel', handleWheelHeader);
 
-  document.addEventListener('wheel', e => {
-    // don't make zoom smaller than 1
-    if (zoom > 1) {
-      if (e.deltaY > 0) {
-        zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
-      } else {
-        zoomElement.style.transform = `scale(${zoom -= zoomSpeed})`;
-      }
-    } else if (zoom === 1) {
-      if (e.deltaY > 0) {
-        zoomElement.style.transform = `scale(${zoom += zoomSpeed})`;
-      }
 
-    } else {
-      zoom = 1;
-    }
-    console.log(zoom);
-  });
 };
