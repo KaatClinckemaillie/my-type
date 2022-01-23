@@ -1,45 +1,13 @@
-/* import Letter from './classes/Letter.js'; */
-//import Vector from './classes/Vector.js';
 import {random} from './functions/lib.js';
 
 const $header = document.querySelector('.header');
 const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
 
-/* const $canvasHeader = document.querySelector('.header__canvas'); */
 const letters = [];
-/* const movingLetters = []; */
-/* const lettersPositions = []; */
 
 const zoomElement = document.querySelector('.zoom');
 let zoom = 1;
 const zoomSpeed = 0.5;
-
-/* const animate = () => {
-  //ctx.clearRect(0, 0, $canvasHeader.width, $canvasHeader.height);
-  letters.forEach(letter => letter.draw());
-
-  //requestAnimationFrame(animate);
-}; */
-
-/* const pickCoordinateLetter = () => {
-  let letterPosition = new Vector(random(1, cellAmountLetter), random(1, cellAmountLetter));
-
-  // check if position is already used + margin
-  while (lettersPositions.some(item => item.x === letterPosition.x && item.y === letterPosition.y)) {
-    letterPosition = new Vector(random(1, cellAmountLetter), random(1, cellAmountLetter));
-  }
-  console.log(letterPosition);
-  lettersPositions.push(letterPosition);
-  return letterPosition;
-
-}; */
-
-/* const showLetters = () => {
-  letters.forEach(letter => movingLetters.push(new Letter($canvasHeader, letter, pickCoordinateLetter())));
-  console.log(movingLetters);
-  movingLetters.forEach(letter => letter.draw());
-  console.log(lettersPositions);
-}; */
 
 const getLetters = async () => {
   console.log('Start loading the JSON file');
@@ -48,10 +16,6 @@ const getLetters = async () => {
   console.log(data);
   data.forEach(item => letters.push(item.letter));
   console.log(letters);
-  //animate();
-  //showLetters();
-  //pickCoordinateLetterX();
-
   createGridElements();
 };
 
@@ -91,11 +55,6 @@ const shuffle = array => {
   return array;
 };
 
-
-/* const resizeWindow = () => {
-  $canvasHeader.setAttribute('height', window.innerHeight);
-  $canvasHeader.setAttribute('width', window.innerWidth);
-}; */
 
 export const init = () => {
   console.log('start executing this JavaScript');
