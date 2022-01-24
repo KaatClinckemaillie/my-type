@@ -100,6 +100,7 @@ li {
 .header__title--initial {
   width: 130px;
   height: 140px;
+  margin-top: -1.5rem;
 }
 
 .header__title--cta {
@@ -199,7 +200,7 @@ li {
   }
 
   .header__title--text {
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   .header__title--initial {
@@ -245,9 +246,6 @@ li {
 
 @media only screen and (min-width: 1024px) {
 
-  .header__title--text {
-    margin-top: 3rem;
-  }
 
 }
 
@@ -258,7 +256,7 @@ li {
   }
 
   .header__title--text {
-    margin-top: .2rem;
+    margin-top: 1rem;
   }
 
   .header__title--initial {
