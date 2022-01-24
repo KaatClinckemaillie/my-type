@@ -1,15 +1,18 @@
 import {random} from './functions/lib.js';
 
+//header
 const $headerBg = document.querySelector('.header__bg');
 const $zoomInitial = document.querySelector('.header__title--initial');
 const $focusZoomInitial = document.querySelector('.initial__focus-scroll');
+const $colorInitial = $zoomInitial.querySelector('.initial__color');
 const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
+
+//prologue
+const $prologueContainer = document.querySelector('.prologue__container');
 
 const letters = [];
 
-const step = 0.99;
-const minScale = 1;
-let scale = 1;
+
 const rect = $focusZoomInitial.getBoundingClientRect();
 const originCenterX = rect.x + rect.width / 2;
 const originCenterY = rect.y + rect.height / 2;
@@ -27,38 +30,52 @@ const getLetters = async () => {
 const handleWheelHeader = e => {
   e.preventDefault();
   const factor = e.deltaY;
-  //console.log(factor);
-  const scaleChanged = Math.pow(step, factor);
-  //console.log(`scaleChanged: ${scaleChanged}`);
-  // huidige positie
-  const rect = $focusZoomInitial.getBoundingClientRect();
-  const currentCenterX = rect.x + rect.width / 2;
-  const currentCenterY = rect.y + rect.height / 2;
+
+  // check zoom in or zoom out
+  // go from header to the prologue
   if (factor > 0) {
     let scale;
+
+    // check portrait or landscape
+    // calculate scale
     if (window.innerWidth < window.innerHeight || window.innerWidth === window.innerHeight) {
       scale = (window.innerHeight / rect.height);
       console.log(scale);
     } else {
       scale = (window.innerWidth / rect.width);
     }
-    // positie waar je naartoe wilt
+    // endposition
     const screenCenterX = window.innerWidth / 2;
     const screencenterY = window.innerHeight / 2;
-    // afstand huidige positie en positie waar je naartoe wilt
+
+    // distance to translate
     const distanceX = (screenCenterX - originCenterX) + 200;
     const distanceY = (screencenterY - originCenterY) + scale;
 
-    $zoomInitial.style.transition = '5s all ease-in';
+    // zoom out and translate the header
+    $zoomInitial.style.transition = '5s transform ease-in, 3s fill';
     $zoomInitial.style.transform = `translate(${distanceX + 200}px, ${distanceY + scale}px) scale(${scale})`;
-    $focusZoomInitial.style.transition = '8s all ease-in';
+    $colorInitial.style.fill = '#EBEBEB';
+    $focusZoomInitial.style.fill = '#EBEBEB';
 
+    // show prologue
+
+    $prologueContainer.style.transition = '3s all ease-in 2s';
+    $prologueContainer.style.opacity = `1`;
+    $prologueContainer.style.height = `100vh`;
+    $prologueContainer.style.width = '100vw';
+
+  // go back to header
   } else {
     $zoomInitial.style.transition = '1s all ease-out';
     $focusZoomInitial.style.transition = '1s all ease-out';
     $zoomInitial.style.removeProperty('transform');
     $focusZoomInitial.style.removeProperty('transform');
-    //}
+
+    $prologueContainer.style.transition = '1s all ease-out';
+    $prologueContainer.style.height = '1vh';
+    $prologueContainer.style.opacity = '0';
+    $prologueContainer.style.width = '1vh';
   }
 };
 
@@ -102,6 +119,8 @@ const shuffle = array => {
 export const init = () => {
   console.log('start executing this JavaScript');
   //resizeWindow();
+  $prologueContainer.style.height = '1vh';
+  $prologueContainer.style.width = '1vw';
   getLetters();
   document.addEventListener('wheel', handleWheelHeader);
 
