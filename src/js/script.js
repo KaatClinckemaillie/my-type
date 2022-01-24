@@ -2,6 +2,7 @@ import {random} from './functions/lib.js';
 
 const $headerBg = document.querySelector('.header__bg');
 const $zoomInitial = document.querySelector('.header__title--initial');
+const $focusZoomInitial = document.querySelector('.initial__focus-scroll');
 const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
 
 const letters = [];
@@ -9,7 +10,7 @@ const letters = [];
 const step = 0.99;
 const minScale = 1;
 let scale = 1;
-const rect = $zoomInitial.getBoundingClientRect();
+const rect = $focusZoomInitial.getBoundingClientRect();
 const originCenterX = rect.x + rect.width / 2;
 const originCenterY = rect.y + rect.height / 2;
 
@@ -26,48 +27,37 @@ const getLetters = async () => {
 const handleWheelHeader = e => {
   e.preventDefault();
   const factor = e.deltaY;
-  console.log(factor);
+  //console.log(factor);
   const scaleChanged = Math.pow(step, factor);
-  console.log(`scaleChanged: ${scaleChanged}`);
+  //console.log(`scaleChanged: ${scaleChanged}`);
   // huidige positie
-  const rect = $zoomInitial.getBoundingClientRect();
+  const rect = $focusZoomInitial.getBoundingClientRect();
   const currentCenterX = rect.x + rect.width / 2;
   const currentCenterY = rect.y + rect.height / 2;
   if (factor > 0) {
-    //scale += 2;
+    let scale;
+    if (window.innerWidth < window.innerHeight || window.innerWidth === window.innerHeight) {
+      scale = (window.innerHeight / rect.height);
+      console.log(scale);
+    } else {
+      scale = (window.innerWidth / rect.width);
+    }
     // positie waar je naartoe wilt
     const screenCenterX = window.innerWidth / 2;
     const screencenterY = window.innerHeight / 2;
     // afstand huidige positie en positie waar je naartoe wilt
-    const distanceX = (screenCenterX - originCenterX);
-    const distanceY = screencenterY - originCenterY;
-    /*     // indien je niet in 1 keer naar de gewenste positie wilt gaan, kun je hiermee in stapjes naar de plaats gaan
-    const newCenterX = currentCenterX + middlePosToCurrentCenterDistanceX * (1 - scaleChanged);
-    const newCenterY = currentCenterY + middlePosToCurrentCenterDistanceY * (1 - scaleChanged);
-    // All we are doing above is: getting the target center, then calculate the offset from origin center.
-    //afstand tussenstapje en oorspronkelijke afstand
-    const offsetX = newCenterX - originCenterX;
-    const offsetY = newCenterY - originCenterY; */
-    // !!! Both translate and scale are relative to the original position and scale, not to the current.
+    const distanceX = (screenCenterX - originCenterX) + 200;
+    const distanceY = (screencenterY - originCenterY) + scale;
+
     $zoomInitial.style.transition = '5s all ease-in';
-    $zoomInitial.style.transform = `translate(${distanceX}px, ${distanceY}px) scale(50)`;
+    $zoomInitial.style.transform = `translate(${distanceX + 200}px, ${distanceY + scale}px) scale(${scale})`;
+    $focusZoomInitial.style.transition = '8s all ease-in';
+
   } else {
-    //scale -= 5;
-    // afstand huidige positie en positie waar je naartoe wilt
-    //const middlePosToCurrentCenterDistanceX = originCenterX - currentCenterX;
-    //const middlePosToCurrentCenterDistanceY = originCenterY - currentCenterY;
-    // indien je niet in 1 keer naar de gewenste positie wilt gaan, kun je hiermee in stapjes naar de plaats gaan
-    //const newCenterX = currentCenterX + middlePosToCurrentCenterDistanceX;
-    //const newCenterY = currentCenterY + middlePosToCurrentCenterDistanceY;
-    // All we are doing above is: getting the target center, then calculate the offset from origin center.
-    //afstand tussenstapje en oorspronkelijke afstand
-    //const offsetX = middlePosToCurrentCenterDistanceX;
-    //const offsetY = middlePosToCurrentCenterDistanceY;
-    // !!! Both translate and scale are relative to the original position and scale, not to the current.
-    //if (scale < minScale) {
-    //scale = 1;
     $zoomInitial.style.transition = '1s all ease-out';
+    $focusZoomInitial.style.transition = '1s all ease-out';
     $zoomInitial.style.removeProperty('transform');
+    $focusZoomInitial.style.removeProperty('transform');
     //}
   }
 };
