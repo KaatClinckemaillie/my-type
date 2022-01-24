@@ -34,39 +34,41 @@ const handleWheelHeader = e => {
   const currentCenterX = rect.x + rect.width / 2;
   const currentCenterY = rect.y + rect.height / 2;
   if (factor > 0) {
-    scale += 5;
+    //scale += 2;
     // positie waar je naartoe wilt
     const screenCenterX = window.innerWidth / 2;
     const screencenterY = window.innerHeight / 2;
     // afstand huidige positie en positie waar je naartoe wilt
-    const middlePosToCurrentCenterDistanceX = screenCenterX - currentCenterX;
-    const middlePosToCurrentCenterDistanceY = screencenterY - currentCenterY;
-    // indien je niet in 1 keer naar de gewenste positie wilt gaan, kun je hiermee in stapjes naar de plaats gaan
+    const distanceX = (screenCenterX - originCenterX);
+    const distanceY = screencenterY - originCenterY;
+    /*     // indien je niet in 1 keer naar de gewenste positie wilt gaan, kun je hiermee in stapjes naar de plaats gaan
     const newCenterX = currentCenterX + middlePosToCurrentCenterDistanceX * (1 - scaleChanged);
     const newCenterY = currentCenterY + middlePosToCurrentCenterDistanceY * (1 - scaleChanged);
     // All we are doing above is: getting the target center, then calculate the offset from origin center.
     //afstand tussenstapje en oorspronkelijke afstand
     const offsetX = newCenterX - originCenterX;
-    const offsetY = newCenterY - originCenterY;
+    const offsetY = newCenterY - originCenterY; */
     // !!! Both translate and scale are relative to the original position and scale, not to the current.
-    $zoomInitial.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+    $zoomInitial.style.transition = '5s all ease-in';
+    $zoomInitial.style.transform = `translate(${distanceX}px, ${distanceY}px) scale(50)`;
   } else {
-    scale -= 5;
+    //scale -= 5;
     // afstand huidige positie en positie waar je naartoe wilt
-    const middlePosToCurrentCenterDistanceX = originCenterX - currentCenterX;
-    const middlePosToCurrentCenterDistanceY = originCenterY - currentCenterY;
+    //const middlePosToCurrentCenterDistanceX = originCenterX - currentCenterX;
+    //const middlePosToCurrentCenterDistanceY = originCenterY - currentCenterY;
     // indien je niet in 1 keer naar de gewenste positie wilt gaan, kun je hiermee in stapjes naar de plaats gaan
-    const newCenterX = currentCenterX + middlePosToCurrentCenterDistanceX;
-    const newCenterY = currentCenterY + middlePosToCurrentCenterDistanceY;
+    //const newCenterX = currentCenterX + middlePosToCurrentCenterDistanceX;
+    //const newCenterY = currentCenterY + middlePosToCurrentCenterDistanceY;
     // All we are doing above is: getting the target center, then calculate the offset from origin center.
     //afstand tussenstapje en oorspronkelijke afstand
-    const offsetX = middlePosToCurrentCenterDistanceX;
-    const offsetY = middlePosToCurrentCenterDistanceY;
+    //const offsetX = middlePosToCurrentCenterDistanceX;
+    //const offsetY = middlePosToCurrentCenterDistanceY;
     // !!! Both translate and scale are relative to the original position and scale, not to the current.
-    if (scale < minScale) {
-      scale = 1;
-      $zoomInitial.style.removeProperty('transform');
-    }
+    //if (scale < minScale) {
+    //scale = 1;
+    $zoomInitial.style.transition = '1s all ease-out';
+    $zoomInitial.style.removeProperty('transform');
+    //}
   }
 };
 
