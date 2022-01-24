@@ -53,8 +53,12 @@ const handleWheelHeader = e => {
     const distanceY = (screencenterY - originCenterY) + scale;
 
     // zoom out and translate the header
-    $zoomInitial.style.transition = '5s transform ease-in, 3s fill';
+    $zoomInitial.style.transition = '5s transform ease-in';
     $zoomInitial.style.transform = `translate(${distanceX + 200}px, ${distanceY + scale}px) scale(${scale})`;
+
+    // change color for fluent transition
+    $colorInitial.style.transition = '3s fill 2s';
+    $focusZoomInitial.style.transition = '3s fill 2s';
     $colorInitial.style.fill = '#EBEBEB';
     $focusZoomInitial.style.fill = '#EBEBEB';
 
