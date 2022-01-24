@@ -1,6 +1,7 @@
 import {random} from './functions/lib.js';
 
 //header
+const $header = document.querySelector('.header');
 const $headerBg = document.querySelector('.header__bg');
 const $zoomInitial = document.querySelector('.header__title--initial');
 const $focusZoomInitial = document.querySelector('.initial__focus-scroll');
@@ -71,11 +72,19 @@ const handleWheelHeader = e => {
 
   // go back to header
   } else {
+    //zoom initial out
     $zoomInitial.style.transition = '1s all ease-out';
     $focusZoomInitial.style.transition = '1s all ease-out';
     $zoomInitial.style.removeProperty('transform');
     $focusZoomInitial.style.removeProperty('transform');
 
+    //change color back to white
+    $colorInitial.style.transition = '1s fill';
+    $focusZoomInitial.style.transition = '1s fill';
+    $colorInitial.style.fill = '#fff';
+    $focusZoomInitial.style.fill = '#fff';
+
+    // hide prologue
     $prologueContainer.style.transition = '1s all ease-out';
     $prologueContainer.style.height = '1vh';
     $prologueContainer.style.opacity = '0';
@@ -123,8 +132,15 @@ const shuffle = array => {
 export const init = () => {
   console.log('start executing this JavaScript');
   //resizeWindow();
+
+  // setup style for transitions
+  $header.style.position = 'fixed';
   $prologueContainer.style.height = '1vh';
   $prologueContainer.style.width = '1vw';
+  $prologueContainer.style.opacity = '0';
+
+
+
   getLetters();
   document.addEventListener('wheel', handleWheelHeader);
 

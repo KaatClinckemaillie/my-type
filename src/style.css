@@ -49,7 +49,6 @@ li {
 
 .header {
   z-index: -1;
-  position: fixed;
   display: grid;
   height: calc(100vh - 4rem);
   width: 100%;
@@ -193,7 +192,6 @@ li {
 .prologue__container {
   background-color: red;
   height: 100vh;
-  opacity: 0;
   display: grid;
   place-content: center;
   z-index: 4;
