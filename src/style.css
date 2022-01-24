@@ -33,6 +33,7 @@ li {
 }
 
 .menu {
+  background-color: var(--colorGrey);
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
@@ -50,7 +51,7 @@ li {
 .header {
   z-index: -1;
   display: grid;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 3rem);
   width: 100%;
   grid-template: 1fr / 1fr;
 }
@@ -201,6 +202,10 @@ li {
 /* RESPONSIVE PART STARTS HERE */
 
 @media only screen and (min-width: 768px) {
+
+  .header {
+    background-color: var(--colorGrey);
+  }
 
   .header__bg {
     grid-template-rows: repeat(7, 1fr);
