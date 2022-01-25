@@ -1,14 +1,18 @@
 import {random} from './functions/lib.js';
 //header
 const $header = document.querySelector('.header');
+const $headerWheel = document.querySelector('.header__wheel');
 const $headerBg = document.querySelector('.header__bg');
 const $zoomInitial = document.querySelector('.header__title--initial');
 const $focusZoomInitial = document.querySelector('.initial__focus-scroll');
 const $colorInitial = $zoomInitial.querySelector('.initial__color');
-const amountNeededCells = 65; // grid of 7 x 11, so 91 cells, 26 cells are already in use, so 65 cells are left;
+const amountNeededCells = 67; // grid of 7 x 1", so 91 cells, 24 cells are already in use, so 67 cells are left;
 
 //prologue
 const $prologueContainer = document.querySelector('.prologue__container');
+
+//chapters
+const $chapters = document.querySelector('.chapters');
 
 const letters = [];
 
@@ -34,40 +38,45 @@ const handleWheelHeader = e => {
   // check zoom in or zoom out
   // go from header to the prologue
   if (factor > 0) {
-    let scale;
+    // check if prologue is already visible, if not => zoom in on initial, else=> make all contant 'visible'
+    if ($prologueContainer.style.opacity === '0') {
+      let scale;
+      // check portrait or landscape
+      // calculate scale
+      if (window.innerWidth < window.innerHeight || window.innerWidth === window.innerHeight) {
+        scale = (window.innerHeight / rect.height);
+        console.log(scale);
+      } else {
+        scale = (window.innerWidth / rect.width);
+      }
+      // endposition
+      const screenCenterX = window.innerWidth / 2;
+      const screencenterY = window.innerHeight / 2;
 
-    // check portrait or landscape
-    // calculate scale
-    if (window.innerWidth < window.innerHeight || window.innerWidth === window.innerHeight) {
-      scale = (window.innerHeight / rect.height);
-      console.log(scale);
-    } else {
-      scale = (window.innerWidth / rect.width);
-    }
-    // endposition
-    const screenCenterX = window.innerWidth / 2;
-    const screencenterY = window.innerHeight / 2;
+      // distance to translate
+      const distanceX = (screenCenterX - originCenterX) + 200;
+      const distanceY = (screencenterY - originCenterY) + scale;
 
-    // distance to translate
-    const distanceX = (screenCenterX - originCenterX) + 200;
-    const distanceY = (screencenterY - originCenterY) + scale;
+      // zoom out and translate initial
+      $zoomInitial.style.transition = '5s transform ease-in';
+      $zoomInitial.style.transform = `translate(${distanceX + 200}px, ${distanceY + scale}px) scale(${scale})`;
 
-    // zoom out and translate the header
-    $zoomInitial.style.transition = '5s transform ease-in';
-    $zoomInitial.style.transform = `translate(${distanceX + 200}px, ${distanceY + scale}px) scale(${scale})`;
+      // change color of initial for fluent transition
+      $colorInitial.style.transition = '3s fill 2s';
+      $focusZoomInitial.style.transition = '3s fill 2s';
+      $colorInitial.style.fill = '#EBEBEB';
+      $focusZoomInitial.style.fill = '#EBEBEB';
 
-    // change color for fluent transition
-    $colorInitial.style.transition = '3s fill 2s';
-    $focusZoomInitial.style.transition = '3s fill 2s';
-    $colorInitial.style.fill = '#EBEBEB';
-    $focusZoomInitial.style.fill = '#EBEBEB';
+      // show prologue
 
-    // show prologue
+      $prologueContainer.style.transition = '3s all ease-in 3s';
+      $prologueContainer.style.opacity = `1`;
+      $prologueContainer.style.height = `100vh`;
+      $prologueContainer.style.width = '100vw';
+    } /* else {
 
-    $prologueContainer.style.transition = '3s all ease-in 3s';
-    $prologueContainer.style.opacity = `1`;
-    $prologueContainer.style.height = `100vh`;
-    $prologueContainer.style.width = '100vw';
+      $chapters.classList.remove('hidden');
+    } */
 
   // go back to header
   } else {
@@ -137,11 +146,13 @@ export const init = () => {
   $prologueContainer.style.height = '1vh';
   $prologueContainer.style.width = '1vw';
   $prologueContainer.style.opacity = '0';
+  $chapters.classList.add('hidden');
+
 
 
 
   getLetters();
-  document.addEventListener('wheel', handleWheelHeader);
+  $headerWheel.onwheel = handleWheelHeader;
 
 
 };
