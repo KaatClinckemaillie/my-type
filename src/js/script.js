@@ -1,5 +1,4 @@
 import {random} from './functions/lib.js';
-
 //header
 const $header = document.querySelector('.header');
 const $headerBg = document.querySelector('.header__bg');
@@ -29,7 +28,7 @@ const getLetters = async () => {
 };
 
 const handleWheelHeader = e => {
-  e.preventDefault();
+  //e.preventDefault();
   const factor = e.deltaY;
 
   // check zoom in or zoom out
@@ -98,7 +97,7 @@ const createGridElements = () => {
   const stylePosition = ['tc', 'tl', 'tr', 'bc', 'bl', 'br', 'lc', 'rc', 'c'];
 
   // first add al the letters plus one empty div
-  letters.forEach(letter => elements.push(`<div class="header__letter header__letter--${stylePosition[random(0, stylePosition.length)]} header__letter--${styleSize[random(0, styleSize.length)]}">${letter}</div>`));
+  letters.forEach(letter => elements.push(`<div class="header__letter header__letter--transform header__letter--${stylePosition[random(0, stylePosition.length)]} header__letter--${styleSize[random(0, styleSize.length)]}">${letter}</div>`));
 
   // add empty divs, so that Elements has a length of 67
   const emptyCells = amountNeededCells - elements.length;
