@@ -28,10 +28,6 @@ li {
   font-size: var(--fontBig);
 }
 
-.hidden {
-  display: none;
-}
-
 .menu {
   background-color: var(--colorGrey);
   display: flex;
@@ -51,7 +47,7 @@ li {
 .header {
   z-index: -1;
   display: grid;
-  height: calc(100vh - 3rem);
+  height: 100vh;
   width: 100%;
   grid-template: 1fr / 1fr;
 }
@@ -212,6 +208,10 @@ li {
   place-content: center;
   z-index: 4;
 
+}
+
+.hidden {
+  display: none;
 }
 
 /* RESPONSIVE PART STARTS HERE */

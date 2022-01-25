@@ -1,4 +1,9 @@
 <section class="content">
+
+  <header class="menu hidden">
+    <h1 class="pagetitle hidden">Bembo Big Time</h1>
+    <a href="" class="menu__link">MENU</a>
+  </header>
   <div class="header zoom">
       <div class="header__title">
       <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="335.5" height="357.172" viewBox="0 0 335.5 357.172">

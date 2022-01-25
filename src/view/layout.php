@@ -13,10 +13,7 @@
 </head>
 <body>
   <div class="container">
-      <header class="menu">
-        <h1 class="pagetitle hidden">Bembo Big Time</h1>
-        <a href="" class="menu__link">MENU</a>
-      </header>
+
       <?php echo $content;?>
   </div>
   <?php echo $js; ?>

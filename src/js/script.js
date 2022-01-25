@@ -64,7 +64,7 @@ const handleWheelHeader = e => {
 
     // show prologue
 
-    $prologueContainer.style.transition = '3s all ease-in 2s';
+    $prologueContainer.style.transition = '3s all ease-in 3s';
     $prologueContainer.style.opacity = `1`;
     $prologueContainer.style.height = `100vh`;
     $prologueContainer.style.width = '100vw';
@@ -84,7 +84,7 @@ const handleWheelHeader = e => {
     $focusZoomInitial.style.fill = '#fff';
 
     // hide prologue
-    $prologueContainer.style.transition = '1s all ease-out';
+    $prologueContainer.style.removeProperty('transition');
     $prologueContainer.style.height = '1vh';
     $prologueContainer.style.opacity = '0';
     $prologueContainer.style.width = '1vh';
