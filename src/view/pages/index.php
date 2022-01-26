@@ -4,10 +4,10 @@
     <h1 class="pagetitle hidden">Bembo Big Time</h1>
     <a href="" class="menu__link">MENU</a>
   </header>
-  <div class="header__wheel">
+  <div class="header__transition">
     <div class="header zoom">
       <div class="header__title">
-        <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="335.5" height="357.172" viewBox="0 0 335.5 357.172">
+        <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="260" height="280" viewBox="0 0 335.5 357.172">
           <g id="initial" transform="translate(0 -59.702)">
             <rect id="rectangle" width="285.206" height="284.985" transform="translate(14.728 91.152)" fill="#1dff00"/>
             <g id="lines" transform="translate(0.5 60.202)">
@@ -44,7 +44,7 @@
               <path id="Path_78" data-name="Path 78" d="M159.076,199.945a40.22,40.22,0,0,1,37.562,25.838" transform="translate(-2.373 -61.76)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
             </g>
             <path class="initial__color" id="Path_231" data-name="Path 231" d="M51.66-43.121c0,26.9-6.831,35.009-41.84,35.009H0V0H156.261c68.738,0,92.22-47.391,92.22-81.119,0-33.3-23.482-59.345-63.614-71.3v-.854c28.605-5.123,48.671-27.751,48.671-52.087,0-20.493-8.539-35.009-26.043-47.391-15.37-11.1-48.245-16.651-85.815-16.651-8.112,0-40.56.427-64.041,1.281-12.381.427-41.84,2.135-53.795,2.562v8.112H18.785c29.886,0,32.875,12.808,32.875,37.144ZM87.1-260.008c10.674-.427,28.178-1.281,37.571-1.281,52.514,0,70.446,27.324,70.446,57.21,0,33.3-20.493,49.525-61.48,49.525H87.1Zm0,113.567h46.11c49.952,0,75.142,33.728,75.142,66.6,0,33.3-16.224,68.311-72.58,68.311C99.9-11.527,87.1-23.055,87.1-55.5Z" transform="translate(87.019 352.226)" fill="#fff"/>
-            <rect class="initial__focus-scroll" id="focus-scroll" width="30" height="30" transform="translate(142.354 221.42)" fill="#fff"/>
+            <circle class="initial__focus initial__color" id="focus-scroll" cx="50%" cy="50%" r="15" transform="translate(-12 60)" fill="#fff"/>
           </g>
         </svg>
         <div class="header__title--text">
@@ -58,7 +58,8 @@
       </div>
 
     </div>
-    </div>
+    <div class="header__transition--bg"></div>
+  </div>
     <section class="prologue">
       <div class="prologue__container">
         <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>

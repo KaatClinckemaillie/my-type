@@ -1,11 +1,14 @@
 import {random} from './functions/lib.js';
+
+gsap.registerPlugin(ScrollTrigger);
+
 //header
 const $header = document.querySelector('.header');
-const $headerWheel = document.querySelector('.header__wheel');
 const $headerBg = document.querySelector('.header__bg');
-const $zoomInitial = document.querySelector('.header__title--initial');
-const $focusZoomInitial = document.querySelector('.initial__focus-scroll');
-const $colorInitial = $zoomInitial.querySelector('.initial__color');
+const $headerInitial = document.querySelector('.header__title--initial');
+const $focusInitial = document.querySelector('.initial__focus');
+const $colorInitial = $headerInitial.querySelector('.initial__color');
+
 const amountNeededCells = 67; // grid of 7 x 1", so 91 cells, 24 cells are already in use, so 67 cells are left;
 
 //prologue
@@ -17,9 +20,29 @@ const $chapters = document.querySelector('.chapters');
 const letters = [];
 
 
-const rect = $focusZoomInitial.getBoundingClientRect();
+const rect = $focusInitial.getBoundingClientRect();
 const originCenterX = rect.x + rect.width / 2;
 const originCenterY = rect.y + rect.height / 2;
+const screenCenterX = window.innerWidth / 2;
+const screencenterY = window.innerHeight / 2;
+
+let scale;
+let radius;
+// check portrait or landscape
+// calculate scale
+if (window.innerWidth < window.innerHeight || window.innerWidth === window.innerHeight) {
+  scale = (window.innerWidth / rect.width);
+  //console.log(scale);
+  radius = window.innerHeight / 2;
+} else {
+
+  scale = (window.innerHeight / rect.height);
+  radius = window.innerWidth / 2;
+}
+
+// distance to translate
+const distanceX = (screenCenterX - originCenterX) + scale;
+const distanceY = (screencenterY - originCenterY) + scale;
 
 const getLetters = async () => {
   console.log('Start loading the JSON file');
@@ -29,75 +52,6 @@ const getLetters = async () => {
   data.forEach(item => letters.push(item.letter));
   console.log(letters);
   createGridElements();
-};
-
-const handleWheelHeader = e => {
-  //e.preventDefault();
-  const factor = e.deltaY;
-
-  // check zoom in or zoom out
-  // go from header to the prologue
-  if (factor > 0) {
-    // check if prologue is already visible, if not => zoom in on initial, else=> make all contant 'visible'
-    if ($prologueContainer.style.opacity === '0') {
-      let scale;
-      // check portrait or landscape
-      // calculate scale
-      if (window.innerWidth < window.innerHeight || window.innerWidth === window.innerHeight) {
-        scale = (window.innerHeight / rect.height);
-        console.log(scale);
-      } else {
-        scale = (window.innerWidth / rect.width);
-      }
-      // endposition
-      const screenCenterX = window.innerWidth / 2;
-      const screencenterY = window.innerHeight / 2;
-
-      // distance to translate
-      const distanceX = (screenCenterX - originCenterX) + 200;
-      const distanceY = (screencenterY - originCenterY) + scale;
-
-      // zoom out and translate initial
-      $zoomInitial.style.transition = '5s transform ease-in';
-      $zoomInitial.style.transform = `translate(${distanceX + 200}px, ${distanceY + scale}px) scale(${scale})`;
-
-      // change color of initial for fluent transition
-      $colorInitial.style.transition = '3s fill 2s';
-      $focusZoomInitial.style.transition = '3s fill 2s';
-      $colorInitial.style.fill = '#EBEBEB';
-      $focusZoomInitial.style.fill = '#EBEBEB';
-
-      // show prologue
-
-      $prologueContainer.style.transition = '3s all ease-in 3s';
-      $prologueContainer.style.opacity = `1`;
-      $prologueContainer.style.height = `100vh`;
-      $prologueContainer.style.width = '100vw';
-    } /* else {
-
-      $chapters.classList.remove('hidden');
-    } */
-
-  // go back to header
-  } else {
-    //zoom initial out
-    $zoomInitial.style.transition = '1s all ease-out';
-    $focusZoomInitial.style.transition = '1s all ease-out';
-    $zoomInitial.style.removeProperty('transform');
-    $focusZoomInitial.style.removeProperty('transform');
-
-    //change color back to white
-    $colorInitial.style.transition = '1s fill';
-    $focusZoomInitial.style.transition = '1s fill';
-    $colorInitial.style.fill = '#fff';
-    $focusZoomInitial.style.fill = '#fff';
-
-    // hide prologue
-    $prologueContainer.style.removeProperty('transition');
-    $prologueContainer.style.height = '1vh';
-    $prologueContainer.style.opacity = '0';
-    $prologueContainer.style.width = '1vh';
-  }
 };
 
 const createGridElements = () => {
@@ -136,23 +90,38 @@ const shuffle = array => {
   return array;
 };
 
+let tl = gsap.timeline({
+  scrollTrigger: {
+    //pin: true,
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: 1,
+    markers: true,
+  }
+});
+
+tl.to($headerInitial, {
+  duration: 10,
+  transformOrigin: '44% 50%',
+  scale: scale,
+  ease: 'sine.out',
+}) .to ($focusInitial, {
+  attr: {
+    r: () => radius,
+  },
+  duration: 5
+}) .to('.initial__color', {
+  fill: '#ebebeb',
+  duration: '3'
+}, 0)
+;
+
 
 export const init = () => {
   console.log('start executing this JavaScript');
   //resizeWindow();
 
-  // setup style for transitions
   $header.style.position = 'fixed';
-  $prologueContainer.style.height = '1vh';
-  $prologueContainer.style.width = '1vw';
-  $prologueContainer.style.opacity = '0';
-  $chapters.classList.add('hidden');
-
-
-
 
   getLetters();
-  $headerWheel.onwheel = handleWheelHeader;
-
-
 };
