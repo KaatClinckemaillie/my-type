@@ -137,7 +137,8 @@ export const init = () => {
   resizeWindow();
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
-  //gsap.set($prologue, {opacity: 0, y: - 100});
+  const y = - window.innerHeight;
+  gsap.set($prologue, {opacity: 1, y: y});
 
   getLetters();
 };
