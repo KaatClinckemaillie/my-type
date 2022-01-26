@@ -55,14 +55,6 @@ li {
   overflow: hidden;
 }
 
-.header__wheel {
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  width: 100vw;
-  height: 100vh;
-  z-index: 3;
-}
-
 .header__bg {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
@@ -211,20 +203,121 @@ li {
 
 .prologue {
   width: 100vw;
-  display: grid;
-  place-content: center;
+  height: 100vh;
   overflow: hidden;
+  border: solid .2rem black;
 }
 
 .prologue__paintings {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(36, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(36, 50px);
+  grid-template-rows: repeat(20, 50px);
 }
 
+.prologue__painting--1 {
+  background-image: url(assets/img/paintings/painting1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 12 / 18;
+  grid-row: 11 / 15;
+}
 
+.prologue__painting--2 {
+  background-image: url(assets/img/paintings/painting2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 21 / 27;
+  grid-row: 1 / 4;
+}
+
+.prologue__painting--3 {
+  background-image: url(assets/img/paintings/painting3.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 12 / 16;
+  grid-row: 4 / 10;
+}
+
+.prologue__painting--4 {
+  background-image: url(assets/img/paintings/painting4.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 5 / 8;
+  grid-row: 1 / 5;
+}
+
+.prologue__painting--5 {
+  background-image: url(assets/img/paintings/painting5.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 3 / 10;
+  grid-row: 12 / 21;
+}
+
+.prologue__painting--6 {
+  background-image: url(assets/img/paintings/painting6.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 18 / 22;
+  grid-row: 5 / 9;
+}
+
+.prologue__painting--7 {
+  background-image: url(assets/img/paintings/painting7.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 2 / 8;
+  grid-row: 7 / 9;
+}
+
+.prologue__painting--8 {
+  background-image: url(assets/img/paintings/painting8.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 24 / 27;
+  grid-row: 15 / 21;
+}
+
+.prologue__painting--9 {
+  background-image: url(assets/img/paintings/painting4.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 25 / 28;
+  grid-row: 9 / 13;
+}
+
+.prologue__painting--10 {
+  background-image: url(assets/img/paintings/painting6.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 30 / 33;
+  grid-row: 9 / 13;
+}
+
+.prologue__painting--11 {
+  background-image: url(assets/img/paintings/painting7.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 30 / 36;
+  grid-row: 15 / 17;
+}
+
+.prologue__painting--12 {
+  background-image: url(assets/img/paintings/painting1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 29 / 34;
+  grid-row: 3 / 7;
+}
+
+.prologue__painting--13 {
+  background-image: url(assets/img/paintings/painting2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 14 / 20;
+  grid-row: 16 / 21;
+}
 
 .hidden {
   display: none;

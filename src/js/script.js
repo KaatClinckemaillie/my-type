@@ -1,5 +1,5 @@
 import {random} from './functions/lib.js';
-jdk
+
 gsap.registerPlugin(ScrollTrigger);
 
 //header
@@ -118,8 +118,7 @@ const tlPrologue = gsap.timeline({
     trigger: '.prologue',
     pin: true,
     markers: true,
-    start: 'top 70%',
-    end: 'bottom bottom',
+    start: 'top top',
     scrub: 1
   }
 });
@@ -137,9 +136,8 @@ export const init = () => {
   console.log('start executing this JavaScript');
   resizeWindow();
   window.addEventListener('resize', resizeWindow);
-  //$header.style.position = 'fixed';
-  gsap.set($prologue, {opacity: 0, y: - 100});
-
+  $header.style.position = 'fixed';
+  //gsap.set($prologue, {opacity: 0, y: - 100});
 
   getLetters();
 };

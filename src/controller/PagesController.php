@@ -9,8 +9,8 @@ class PagesController extends Controller {
 
   public function index() {
     $letters = Letter::all();
-    $paintings = Painting::all();
-
+    $paintings = Painting::get();
+    
     $this->set('letters',$letters);
     $this->set('paintings', $paintings);
 
