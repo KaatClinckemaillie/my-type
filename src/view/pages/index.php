@@ -63,14 +63,14 @@
     <section class="prologue">
       <h2 class="hidden">Prologue</h2>
       <div class="prologue__paintings">
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img class="prologue__painting--1" src="assets/img/paintings/painting1.jpg" alt="artwork1" width='376' height='292'>
+        <img class="prologue__painting--2" src="assets/img/paintings/painting2.jpg" alt="artwork2" width='419' height='264'>
+        <img class="prologue__painting--3" src="assets/img/paintings/painting3.jpg" alt="artwork3" width='241' height='359'>
+        <img class="prologue__painting--4" src="assets/img/paintings/painting4.jpg" alt="artwork4" width='178' height='266'>
+        <img class="prologue__painting--5" src="assets/img/paintings/painting5.jpg" alt="artwork5" width='487' height='538'>
+        <img class="prologue__painting--6" src="assets/img/paintings/painting6.jpg" alt="artwork6" width='226' height='264'>
+        <img class="prologue__painting--7" src="assets/img/paintings/painting7.jpg" alt="artwork7" width='395' height='132'>
+        <img class="prologue__painting--8" src="assets/img/paintings/painting8.jpg" alt="artwork8" width='348' height='418'>
       </div>
     </section>
 

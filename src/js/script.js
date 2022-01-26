@@ -1,5 +1,5 @@
 import {random} from './functions/lib.js';
-
+jdk
 gsap.registerPlugin(ScrollTrigger);
 
 //header

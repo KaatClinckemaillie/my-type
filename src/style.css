@@ -210,7 +210,7 @@ li {
 /* PROLOGUE */
 
 .prologue {
-  width: 100%;
+  width: 100vw;
   display: grid;
   place-content: center;
   overflow: hidden;
@@ -219,9 +219,12 @@ li {
 .prologue__paintings {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(36, 1fr);
   gap: 2rem;
 }
+
+
 
 .hidden {
   display: none;
