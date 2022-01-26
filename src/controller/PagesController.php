@@ -2,13 +2,17 @@
 
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../model/Letter.php';
+require_once __DIR__ . '/../model/Painting.php';
 
 
 class PagesController extends Controller {
 
   public function index() {
     $letters = Letter::all();
+    $paintings = Painting::all();
+
     $this->set('letters',$letters);
+    $this->set('paintings', $paintings);
 
   }
 
