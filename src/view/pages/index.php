@@ -4,7 +4,7 @@
     <h1 class="pagetitle hidden">Bembo Big Time</h1>
     <a href="" class="menu__link">MENU</a>
   </header>
-  <div class="header__transition">
+  <!-- <div class="header__transition"> -->
     <div class="header zoom">
       <div class="header__title">
         <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="260" height="280" viewBox="0 0 335.5 357.172">
@@ -58,19 +58,19 @@
       </div>
 
     </div>
-    <div class="header__transition--bg"></div>
-  </div>
+    <!-- <div class="header__transition--bg"></div> -->
+  <!-- </div> -->
     <section class="prologue">
-      <div class="prologue__container">
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='10' height='10'>
-        <p>Dit is het nieuwe deel</p>
+      <h2 class="hidden">Prologue</h2>
+      <div class="prologue__paintings">
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
+        <img src="assets/img/paintings/painting1.jpg" alt="artwork" width='100' height='100'>
       </div>
     </section>
 

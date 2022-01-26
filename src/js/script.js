@@ -7,12 +7,12 @@ const $header = document.querySelector('.header');
 const $headerBg = document.querySelector('.header__bg');
 const $headerInitial = document.querySelector('.header__title--initial');
 const $focusInitial = document.querySelector('.initial__focus');
-const $colorInitial = $headerInitial.querySelector('.initial__color');
+
 
 const amountNeededCells = 67; // grid of 7 x 1", so 91 cells, 24 cells are already in use, so 67 cells are left;
 
 //prologue
-const $prologueContainer = document.querySelector('.prologue__container');
+const $prologue = document.querySelector('.prologue');
 
 //chapters
 const $chapters = document.querySelector('.chapters');
@@ -21,10 +21,6 @@ const letters = [];
 
 
 const rect = $focusInitial.getBoundingClientRect();
-const originCenterX = rect.x + rect.width / 2;
-const originCenterY = rect.y + rect.height / 2;
-const screenCenterX = window.innerWidth / 2;
-const screencenterY = window.innerHeight / 2;
 
 let scale;
 let radius;
@@ -41,8 +37,6 @@ if (window.innerWidth < window.innerHeight || window.innerWidth === window.inner
 }
 
 // distance to translate
-const distanceX = (screenCenterX - originCenterX) + scale;
-const distanceY = (screencenterY - originCenterY) + scale;
 
 const getLetters = async () => {
   console.log('Start loading the JSON file');
@@ -90,19 +84,22 @@ const shuffle = array => {
   return array;
 };
 
-let tl = gsap.timeline({
+const tlHeader = gsap.timeline({
   scrollTrigger: {
-    //pin: true,
+    trigger: '.header',
+    pin: true,
     start: 'top top',
-    end: 'bottom bottom',
+    end: 'bottom 50%',
     scrub: 1,
     markers: true,
+    pinSpacing: false
   }
 });
 
-tl.to($headerInitial, {
+tlHeader.to($headerInitial, {
   duration: 10,
   transformOrigin: '44% 50%',
+  //pin: true,
   scale: scale,
   ease: 'sine.out',
 }) .to ($focusInitial, {
@@ -116,12 +113,33 @@ tl.to($headerInitial, {
 }, 0)
 ;
 
+const tlPrologue = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.prologue',
+    pin: true,
+    markers: true,
+    start: 'top 70%',
+    end: 'bottom bottom',
+    scrub: 1
+  }
+});
+
+tlPrologue.to($prologue, {
+  duration: 3,
+  opacity: 1,
+});
+
+const resizeWindow = () => {
+  console.log('resize');
+};
 
 export const init = () => {
   console.log('start executing this JavaScript');
-  //resizeWindow();
+  resizeWindow();
+  window.addEventListener('resize', resizeWindow);
+  //$header.style.position = 'fixed';
+  gsap.set($prologue, {opacity: 0, y: - 100});
 
-  $header.style.position = 'fixed';
 
   getLetters();
 };
