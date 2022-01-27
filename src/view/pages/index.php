@@ -70,7 +70,15 @@
     </section>
 
   <div class="chapters">
-    <section>Chapter 1</section>
+    <section class="chapter">
+      <h2 class="hidden">Chapter 1: Big Time Bembo</h2>
+      <div class="chapter__title">
+          <div class="chapter__title--initial"></div>
+          <div class="chapter__title--text">Big in History</div>
+          <div class="chapter__title--rect"></div>
+          <div class="chapter__title--chapter">Chapter 1</div>
+      </div>
+    </section>
     <section>Chapter 2</section>
   </div>
 

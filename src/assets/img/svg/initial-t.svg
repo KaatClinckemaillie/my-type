@@ -80,6 +80,6 @@
       <line id="Line_122" data-name="Line 122" x1="86.697" y1="42.878" transform="translate(0.087 133.546)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
       <line id="Line_124" data-name="Line 124" x1="24.732" y1="15.644" transform="translate(40.491 156.353)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
     </g>
-    <text id="B" transform="translate(18.258 207.858)" fill="#fff" font-size="197" font-family="BemboStd, Bembo Std"><tspan x="0" y="0">B</tspan></text>
+    <text id="T" transform="translate(14.258 207.858)" fill="#fff" font-size="197" font-family="BemboStd, Bembo Std"><tspan x="0" y="0">T</tspan></text>
   </g>
 </svg>
