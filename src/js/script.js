@@ -138,10 +138,18 @@ const initScrollTrigger = () => {
   });
 
   tlPrologue.to('.prologue__paintings', {
-    duration: 3,
+    duration: 1,
     opacity: 1,
     scale: 1
-  });
+  })
+    .to('.prologue__paintings', {
+      scale: 4,
+      opacity: 0,
+      duration: 4
+    })
+    .set('.prologue__paintings', {
+      display: 'none'
+    });
 };
 
 export const init = () => {
