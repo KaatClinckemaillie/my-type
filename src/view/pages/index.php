@@ -161,9 +161,14 @@
             </svg>
           </div>
           <div class="chapter__title--text">Big in <span>History</span></div>
-          <div class="chapter__title--rect"></div>
+          <svg class="chapter__title--rect" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
+            <rect id="Rectangle_166" width="298" height="298" fill="#1dff00"/>
+          </svg>
           <div class="chapter__title--chapter">Chapter 1</div>
       </div>
+      <svg class="chapter1__title--line" xmlns="http://www.w3.org/2000/svg" width="1" height="300" viewBox="0 0 1 299.416">
+        <path id="Path_195" data-name="Path 195" d="M-4638,13797.584V14097" transform="translate(4638.5 -13797.584)" fill="none" stroke="#000" stroke-width="1"/>
+      </svg>
     </section>
     <section>Chapter 2</section>
   </div>
