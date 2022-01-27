@@ -281,10 +281,42 @@ li {
   grid-row: 25 / 32;
 }
 
-/* CHAPTER 1 */
+/* TITLE */
+
+.chapter__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+.chapter__title--text {
+  font-size: 2.5rem;
+}
+
+.chapter__title--chapter {
+  font-size: 1.5rem;
+}
+
+.chapter__title--text > span {
+  font-family: var(--fontPrimary);
+  font-weight: var(--fontWeightRegular);
+  color: var(--colorAccent);
+}
+
+.chapter__title--rect {
+  display: hidden;
+}
 
 .hidden {
   display: none;
+}
+
+.chapter1 {
+  color: var(--colorWhite);
+  background-color: var(--colorBlack);
 }
 
 /* RESPONSIVE PART STARTS HERE */
