@@ -95,8 +95,9 @@ const resizeWindow = () => {
 };
 
 const initScrollTrigger = () => {
-  const y = - window.innerHeight;
-  gsap.set($prologue, {opacity: 1, y: y});
+  const y = - 3 / 4 * window.innerHeight;
+  gsap.set('.prologue__paintings', {opacity: 0, scale: 0});
+  gsap.set($prologue, {y: y});
   const tlHeader = gsap.timeline({
     scrollTrigger: {
       trigger: '.header',
@@ -112,7 +113,7 @@ const initScrollTrigger = () => {
   tlHeader.to($headerInitial, {
     duration: 10,
     transformOrigin: '44% 50%',
-    //pin: true,
+    pin: true,
     scale: scale,
     ease: 'sine.out',
   }) .to ($focusInitial, {
@@ -136,9 +137,10 @@ const initScrollTrigger = () => {
     }
   });
 
-  tlPrologue.to($prologue, {
+  tlPrologue.to('.prologue__paintings', {
     duration: 3,
     opacity: 1,
+    scale: 1
   });
 };
 
