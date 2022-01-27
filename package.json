@@ -30,5 +30,8 @@
     "heroku-postbuild": "npm run prod"
   },
   "author": "Frederik Duchi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.9.1"
+  }
 }
