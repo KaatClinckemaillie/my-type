@@ -213,10 +213,12 @@
             Griffo had no idea<br>how important his font would be in
             <br>the history of <br>type design. <br>Bembo was<br>born <br>.
           </p>
-          <p class="chapter__content--desktop chapter__content--p">
+          <p class="chapter__content--desktop chapter__content--p chapter1__content--end">
             Griffo had no idea how <br> important his font would be in <br> the history
             of type design. <br> Bembo was <br> born <br> .
           </p>
+
+
       </div>
     </section>
 
