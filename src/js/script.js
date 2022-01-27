@@ -86,52 +86,60 @@ const shuffle = array => {
   return array;
 };
 
-const tlHeader = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.header',
-    pin: true,
-    start: 'top top',
-    end: 'bottom 50%',
-    scrub: 1,
-    markers: true,
-    pinSpacing: false
-  }
-});
 
-tlHeader.to($headerInitial, {
-  duration: 10,
-  transformOrigin: '44% 50%',
-  //pin: true,
-  scale: scale,
-  ease: 'sine.out',
-}) .to ($focusInitial, {
-  attr: {
-    r: () => radius,
-  },
-  duration: 5
-}) .to('.initial__color', {
-  fill: '#ebebeb',
-  duration: '3'
-}, 0)
-;
 
-const tlPrologue = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.prologue',
-    pin: true,
-    markers: true,
-    start: 'top top',
-    scrub: 1
-  }
-});
 
-tlPrologue.to($prologue, {
-  duration: 3,
-  opacity: 1,
-});
 
 const resizeWindow = () => {
   console.log('resize');
+};
+
+const initScrollTrigger = () => {
+  const y = - window.innerHeight;
+  gsap.set($prologue, {opacity: 1, y: y});
+  const tlHeader = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.header',
+      pin: true,
+      start: 'top top',
+      end: 'bottom 50%',
+      scrub: 1,
+      markers: true,
+      pinSpacing: false
+    }
+  });
+
+  tlHeader.to($headerInitial, {
+    duration: 10,
+    transformOrigin: '44% 50%',
+    //pin: true,
+    scale: scale,
+    ease: 'sine.out',
+  }) .to ($focusInitial, {
+    attr: {
+      r: () => radius,
+    },
+    duration: 5
+  }) .to('.initial__color', {
+    fill: '#ebebeb',
+    duration: '3'
+  }, 0)
+  ;
+
+  const tlPrologue = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.prologue',
+      pin: true,
+      markers: true,
+      start: 'top top',
+      scrub: 1
+    }
+  });
+
+  tlPrologue.to($prologue, {
+    duration: 3,
+    opacity: 1,
+  });
 };
 
 export const init = () => {
@@ -139,8 +147,10 @@ export const init = () => {
   resizeWindow();
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
-  const y = - window.innerHeight;
-  gsap.set($prologue, {opacity: 1, y: y});
+
+  initScrollTrigger();
+
+
 
   getLetters();
 };
