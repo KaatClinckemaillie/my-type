@@ -1,3 +1,9 @@
+@font-face {
+  font-family: bembo;
+  src: url(../assets/fonts/bembo/bembostd.woff), url(../assets/fonts/bembo/bembostd.woff2);
+  font-weight: 400;
+}
+
 :root {
   --colorWhite: white;
   --colorBlack: black;

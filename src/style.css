@@ -1,12 +1,6 @@
 @import './css/reset.css';
 @import './css/vars.css';
 
-@font-face {
-  font-family: bembo;
-  src: url(assets/fonts/bembo/bembostd.woff2) format(woff2);
-  font-style: normal;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -92,13 +86,13 @@ li {
 }
 
 .header__title--small {
-  margin-bottom: -1.5rem;
+  margin-bottom: -1rem;
   margin-left: .4rem;
   font-size: 1.5rem;
 }
 
 .header__title--big {
-  font-family: bembo, serif;
+  font-family: var(--fontPrimary);
   font-weight: var(--fontWeightRegular);
   font-size: 5rem;
 }
@@ -366,7 +360,7 @@ li {
 }
 
 .chapter1__content--date {
-  font-size: calc(128px + (170 - 128) * ((100vw - 320px) / (425 - 320)));
+  font-size: calc(150px + (170 - 150) * ((100vw - 320px) / (425 - 320)));
   text-align: center;
   margin-bottom: -1rem;
   padding-top: 2rem;
@@ -410,6 +404,7 @@ li {
 
   .header__title--text {
     margin-top: 0;
+    margin-top: 2rem;
   }
 
   .header__title--initial {
@@ -423,7 +418,7 @@ li {
 
   .header__title--small {
     font-size: 2.5rem;
-    margin-bottom: -2.5rem;
+    margin-bottom: -1.5rem;
   }
 
   .header__title--cta {
@@ -559,6 +554,12 @@ li {
     color: var(--colorBlack);
   }
 
+
+
+  .chapter__content--desktop {
+    display: block;
+  }
+
   /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
 
   .chapter__title--text {
@@ -613,7 +614,15 @@ li {
     margin-bottom: 3.5rem;
   }
 
+  .chapter__content--mobile {
+    display: none;
+  }
+
   /*   CHAPTER 1 CHAPTER 1 CHAPTER 1 */
+
+  .name-tags {
+    display: none;
+  }
 
 }
 
@@ -622,6 +631,63 @@ li {
   .prologue__paintings {
     grid-template-columns: repeat(36, 40px);
     grid-template-rows: repeat(20, 40px);
+  }
+
+  .chapter1__content {
+    display: grid;
+    grid-template-areas:
+      '. title title'
+      'aldus aldus aldus '
+      'aetna aetna aetna'
+      'h h hypner'
+      'slot slot slot';
+
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .chapter1__name {
+    border: solid .2rem white;
+    border-radius: 50px;
+    width: max-content;
+  }
+
+  .chapter1__name--text {
+    padding: 1.5rem 3rem 1rem;
+    font-family: var(--fontPrimary);
+    text-transform: uppercase;
+    color: var(--colorAccent);
+    font-size: 3rem;
+  }
+
+  .chapter1__content--punchcutter {
+    grid-area: h;
+  }
+
+  .chapter1__content--aetna {
+    grid-area: aetna;
+  }
+
+  .chapter1__content--hypner {
+    grid-area: hypner;
+    font-size: 2rem;
+  }
+
+  .chapter1__title-s {
+    grid-area: title;
+  }
+
+  .chapter1__content--aldus {
+    grid-area: aldus;
+    width: 25rem;
+  }
+
+  .chapter1__content--end {
+    grid-area: slot;
+  }
+
+  .name-tags {
+    display: none;
   }
 
 }

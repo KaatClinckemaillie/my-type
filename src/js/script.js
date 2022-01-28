@@ -2,7 +2,7 @@ import {random} from './functions/lib.js';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-fdsqfd
+ff
 //header
 const $header = document.querySelector('.header');
 const $headerBg = document.querySelector('.header__bg');
