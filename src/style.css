@@ -623,7 +623,7 @@ li {
   }
 
   .chapter__content--p {
-    font-size: calc(24px + (56 - 24) * ((100vw - 768px) / (2560 - 768)));
+    font-size: calc(24px + (50 - 24) * ((100vw - 768px) / (2560 - 768)));
     line-height: 1.4;
     margin-left: 3rem;
     margin-bottom: 3.5rem;
