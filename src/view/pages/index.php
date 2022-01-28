@@ -191,7 +191,8 @@
             </p>
 
             <p class="chapter__content--desktop chapter__content--p">
-              In Venice was the Aldine Press of the well-known printer Aldus Manutius situated.
+              In Venice was the Aldine Press of the well-known printer <strong class="chapter__content--strong name__strong accent">Aldus Manutius</strong>
+              situated.
               He was a humanist. His greatest ambition was to save the written heritage of ancient
               Greece from destruction by publishing it in print. Manutius is seen as the father
               of contemporary publishing.
@@ -225,7 +226,7 @@
             <p class="chapter__content--p aetna__text">
               Manutius wanted to publish the book “The aetna” written by the humanist
               Pietro Bembo. He wanted a new font for this, so had this font made by
-              one of the greatest punchcutters in history, <strong class="chapter__content--strong name__strong">Francesco Griffo </strong>.
+              one of the greatest punchcutters in history, <strong class="chapter__content--strong name__strong accent">Francesco Griffo </strong>.
             </p>
           </div>
           <div class="chapter1__content--punchcutter chapter__content--desktop">
@@ -234,6 +235,9 @@
               typeface into steel. Griffo managed to create the most beautiful movable type based
               on the ancient handwritten manuscripts of classical antiquity.
             </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1266.96" height="1137.53" viewBox="0 0 1266.96 1137.53">
+              <path id="Path_194" data-name="Path 194" d="M87.046,482.531q-22.435,0-36.24-6.04T37,460.1q0-17.257,55.223-27.612,65.578-12.08,85.424-39.692t19.846-89.738v-780.03q0-60.4-12.943-85.424t-78.521-37.1Q49.08-609.857,49.08-630.565q0-10.354,12.08-16.395T99.126-653q46.595,0,72.481,1.726t48.32,2.589q22.435.863,56.949.863,36.24,0,59.538-.863t50.046-2.589Q413.209-653,459.8-653q50.046,0,50.046,22.435,0,12.08-13.806,18.983T452.9-599.5q-63.852,12.08-90.6,42.28t-26.749,80.247v339.969q0,10.354,8.629,12.943a54.655,54.655,0,0,0,15.532,2.589H999.957q12.08,0,12.08-20.709V-478.7q0-46.595-24.16-77.658T898.139-599.5Q868.8-604.68,855-611.583T841.19-630.565Q841.19-653,891.236-653q46.595,0,76.795,1.726t57.812,2.589q27.612.863,65.578.863,31.063,0,48.32-.863t39.692-2.589Q1201.868-653,1248.463-653q24.16,0,37.1,6.04t12.943,16.395q0,20.709-56.949,31.063-63.852,12.08-77.658,41.418T1150.1-478.7v780.03q0,63.852,16.394,91.464t80.246,39.692q55.223,10.355,55.224,27.612,0,10.354-13.806,16.395t-36.24,6.04q-46.595,0-72.481-2.589t-48.32-4.314q-22.435-1.725-58.675-1.726t-59.538,1.726q-23.3,1.726-50.909,4.314t-74.206,2.589q-22.434,0-36.24-6.04T837.739,460.1q0-12.08,12.943-17.257t42.281-10.354q55.223-10.354,87.149-40.555t31.926-85.424V-47.269q0-8.629-8.629-8.629H344.18q-8.629,0-8.629,18.983V290.975q0,53.5,39.692,92.327t98.367,49.183q29.337,5.177,42.28,10.354T528.833,460.1q0,10.354-13.806,16.395t-36.24,6.04q-46.595,0-76.8-2.589t-57.812-4.314q-27.612-1.725-67.3-1.726-36.24,0-61.263,1.726t-53.5,4.314Q133.641,482.53,87.046,482.531Z" transform="translate(-36 654)" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
           </div>
             <p class="chapter__content--p chapter1__content--hypner">
               <strong class="chapter__content--strong accent"> Hypnerotomachia Poliphili </strong> is the book that brought
