@@ -63,9 +63,15 @@
     <section class="prologue">
       <h2 class="hidden">Prologue</h2>
       <div class="prologue__paintings">
-        <?php for( $i=1; $i<=13; $i++): ?>
-          <div class="prologue__painting--<?php echo $i; ?>"></div>
-        <?php endfor; ?>
+        <?php foreach ($paintings as $painting): ?>
+           <img class="prologue__painting--<?php echo $painting->id; ?>" src="assets/img/paintings/<?php echo $painting->name;?>-l.jpg" alt="<?php echo $painting->name;?>"
+            srcset="assets/img/paintings/<?php echo $painting->name;?>-l.jpg <?php echo $painting->widthl;?>w,
+                    assets/img/paintings/<?php echo $painting->name;?>-m.jpg <?php echo $painting->widthm;?>w,
+                    assets/img/paintings/<?php echo $painting->name;?>-s.jpg <?php echo $painting->widths;?>w"
+            sizes="(min-width: 768px) <?php echo $painting->widthm?>px,
+                   (min-width: 1440px) <?php echo $painting->widthm?>px"
+          >
+        <?php endforeach; ?>
       </div>
     </section>
 
@@ -169,66 +175,7 @@
       <svg class="chapter1__title--line" xmlns="http://www.w3.org/2000/svg" width="1" height="300" viewBox="0 0 1 299.416">
         <path id="Path_195" data-name="Path 195" d="M-4638,13797.584V14097" transform="translate(4638.5 -13797.584)" fill="none" stroke="#000" stroke-width="1"/>
       </svg>
-      <div class="chapter__content">
-          <div class="chapter__title-s">
-            <div class="chapter__title--text-s">Big in <span>History</span></div>
-              <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
-                <rect id="Rectangle_166" width="298" height="298" fill="#000"/>
-              </svg>
-            <div class="chapter__title--chapter-s">Chapter 1</div>
-          </div>
-          <p class="chapter__content--p">
-            Bembo is <strong class="chapter__content--strong accent">big in history </strong>.
-            To go back to the origin of the font, we go back to the time where Colombus
-            discovered a new continent and where Leonardo Da Vinci painted the Last Supper.
-             We go back to <strong class="chapter__content--strong accent">the Renaissance.</strong>
-          </p>
-
-          <p class="chapter__content--desktop chapter__content--p">
-            In Venice was the Aldine Press of the well-known printer Aldus Manutius situated.
-            He was a humanist. His greatest ambition was to save the written heritage of ancient
-            Greece from destruction by publishing it in print. Manutius is seen as the father
-            of contemporary publishing.
-          </p>
-          <p class="chapter__content--mobile chapter__content--p text__right">
-            In Venice was the Aldine Press <br> of the well-known printer <br>
-            <strong class="chapter__content--strong name__strong accent">Aldus Manutius</strong> <br> situated.
-          </p>
-
-          <div class="chapter1__content--aetna">
-            <div class="chapter1__content--date accent">1496</div>
-            <p class="chapter__content--p">
-              Manutius wanted to publish the book “The aetna” written by the humanist
-              Pietro Bembo. He wanted a new font for this, so had this font made by
-              one of the greatest punchcutters in history, <strong class="chapter__content--strong name__strong">Francesco Griffo </strong>.
-            </p>
-          </div>
-          <p class="chapter__content--desktop chapter__content--p">
-            Being a punchcutter meant that Griffo spent his days punching out the shape of a
-            typeface into steel. Griffo managed to create the most beautiful movable type based
-            on the ancient handwritten manuscripts of classical antiquity.
-          </p>
-
-          <p class="chapter__content--p">
-            <strong class="chapter__content--strong accent"> Hypnerotomachia Poliphili </strong> is the book that brought
-              Bembo to its greatest splendour.
-            In this publication, Griffo improved the letters' width/height ratio to bring it closer
-            to the calligraphic characteristics of the masters working at that time.
-          </p>
-
-          <p class="chapter__content--mobile chapter__content--p chapter1__content--end">
-            Griffo had no idea<br>how important his font would be in
-            <br>the history of <br>type design. <br>Bembo was<br>born <br>.
-          </p>
-          <p class="chapter__content--desktop chapter__content--p chapter1__content--end">
-            Griffo had no idea how <br> important his font would be in <br> the history
-            of type design. <br> Bembo was <br> born <br> .
-          </p>
-
-
-      </div>
     </section>
-
     <section>Chapter 2</section>
   </div>
 
