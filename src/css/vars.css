@@ -1,12 +1,12 @@
 :root {
   --colorWhite: white;
-  --colorBlack: #000000;
+  --colorBlack: black;
   --colorAccent: #1dff00;
   --colorGrey: #ebebeb;
   --s-0: 1rem;
   --s-1: 1.5rem;
   --s-2: 2rem;
-  --fontPrimary: 'EB Garamond', serif;
+  --fontPrimary: bembo, serif;
   --fontSecundary: gill-sans-nova, sans-serif;
   --fontWeightLight: 300;
   --fontWeightRegular: 400;

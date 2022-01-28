@@ -170,6 +170,13 @@
         <path id="Path_195" data-name="Path 195" d="M-4638,13797.584V14097" transform="translate(4638.5 -13797.584)" fill="none" stroke="#000" stroke-width="1"/>
       </svg>
       <div class="chapter__content">
+          <div class="chapter__title-s">
+            <div class="chapter__title--text-s">Big in <span>History</span></div>
+              <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
+                <rect id="Rectangle_166" width="298" height="298" fill="#000"/>
+              </svg>
+            <div class="chapter__title--chapter-s">Chapter 1</div>
+          </div>
           <p class="chapter__content--p">
             Bembo is <strong class="chapter__content--strong accent">big in history </strong>.
             To go back to the origin of the font, we go back to the time where Colombus
