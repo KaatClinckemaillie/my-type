@@ -58,23 +58,21 @@
       </div>
 
     </div>
-    <!-- <div class="header__transition--bg"></div> -->
-  <!-- </div> -->
-    <section class="prologue">
+<!--     <section class="prologue">
       <h2 class="hidden">Prologue</h2>
       <div class="prologue__paintings">
-        <?php foreach ($paintings as $painting): ?>
-           <img class="prologue__painting--<?php echo $painting->id; ?>" src="assets/img/paintings/<?php echo $painting->name;?>-l.jpg" alt="<?php echo $painting->name;?>"
-            srcset="assets/img/paintings/<?php echo $painting->name;?>-l.jpg <?php echo $painting->widthl;?>w,
-                    assets/img/paintings/<?php echo $painting->name;?>-m.jpg <?php echo $painting->widthm;?>w,
-                    assets/img/paintings/<?php echo $painting->name;?>-s.jpg <?php echo $painting->widths;?>w"
-            sizes="(min-width: 768px) <?php echo $painting->widthm?>px,
-                   (min-width: 1440px) <?php echo $painting->widthl?>px,
-                   <?php echo $painting->widths?>px"
+        <?php /* foreach ($paintings as $painting): */ ?>
+           <img class="prologue__painting--<?php /* echo $painting->id; */ ?>" src="assets/img/paintings/<?php /* echo $painting->name; */?>-l.jpg" alt="<?php /* echo $painting->name; */?>"
+            srcset="assets/img/paintings/<?php /* echo $painting->name; */?>-l.jpg <?php /* echo $painting->widthl; */?>w,
+                    assets/img/paintings/<?php /* echo $painting->name; */?>-m.jpg <?php /* echo $painting->widthm; */?>w,
+                    assets/img/paintings/<?php /* echo $painting->name; */?>-s.jpg <?php /* echo $painting->widths; */?>w"
+            sizes="(min-width: 768px) <?php /* echo $painting->widthm */?>px,
+                   (min-width: 1440px) <?php/* !--  echo $painting->widthl --> */?>px,
+                   <?php /* echo $painting->widths */?>px"
           >
-        <?php endforeach; ?>
+        <?php /* endforeach;  */?>
       </div>
-    </section>
+    </section> -->
 
   <div class="chapters">
     <section class="chapter chapter1">
@@ -184,7 +182,7 @@
               </svg>
             <div class="chapter__title--chapter-s">Chapter 1</div>
           </div>
-          <div class="chapter1__content--Aldus">
+          <div class="chapter1__content--aldus">
             <p class="chapter__content--p">
               Bembo is <strong class="chapter__content--strong accent">big in history </strong>.
               To go back to the origin of the font, we go back to the time where Colombus
@@ -224,7 +222,7 @@
 
           <div class="chapter1__content--aetna">
             <div class="chapter1__content--date accent">1496</div>
-            <p class="chapter__content--p">
+            <p class="chapter__content--p aetna__text">
               Manutius wanted to publish the book “The aetna” written by the humanist
               Pietro Bembo. He wanted a new font for this, so had this font made by
               one of the greatest punchcutters in history, <strong class="chapter__content--strong name__strong">Francesco Griffo </strong>.
@@ -249,7 +247,7 @@
             <br>the history of <br>type design. <br>Bembo was<br>born <br>.
           </p>
           <p class="chapter__content--desktop chapter__content--p chapter1__content--end">
-            Griffo had no idea how <br> important his font would be in <br> the history
+            Griffo had no idea at the time how <br> important his font would be in <br> the history
             of type design. <br> Bembo was <br> born <br> .
           </p>
 
