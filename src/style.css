@@ -420,8 +420,25 @@ li {
 
 .chapter2__content1--text {
   font-size: 1.25rem;
+  line-height: 1.3;
   text-align: center;
-  margin: 2rem;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 16rem;
+}
+
+.chapter2__content1--pagination {
+  width: 13rem;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.chapter2__content--desktop {
+  display: none;
 }
 
 .hidden {
@@ -691,7 +708,6 @@ li {
   }
 
   .aetna__text {
-    margin-top: 1rem;
     grid-column: 2 / 3;
     grid-row: 1 / 3;
     width: 60vw;
@@ -755,7 +771,7 @@ li {
   }
 
   .chapter1__name {
-    border: solid .2rem white;
+    border: solid .1rem white;
     border-radius: 50px;
     width: max-content;
     margin-bottom: 1rem;
@@ -841,7 +857,7 @@ li {
   }
 
   .name__strong {
-    border: .2rem solid white;
+    border: .1rem solid white;
     padding-top: 1rem;
     padding-bottom: .5rem;
     padding-left: 1rem;
@@ -849,6 +865,80 @@ li {
     border-radius: 60px;
   }
 
+  .chapter2__wrapper {
+    flex-direction: row-reverse;
+    width: 60rem;
+    margin: auto;
+    align-items: center;
+  }
+
+  .img__text {
+    margin-left: 0;
+  }
+
+  .chapter2__content--b {
+    width: 300px;
+    margin-right: 0;
+  }
+
+  .chapter2__content--desktop {
+    display: block;
+  }
+
+  .chapter2__content--mobile {
+    display: none;
+  }
+
+  .chapter2__content--1 {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content max-content;
+    margin-top: 2rem;
+  }
+
+  .chapter2__content1--text {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .chapter2__content1--img {
+    grid-row: 2/3;
+    grid-column: 1 / 3;
+    font-size: 10rem;
+    margin: 0;
+  }
+
+  .chapter2__text--axis {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-left: -1rem;
+    text-align: left;
+    display: block;
+  }
+
+  .chapter2__text--main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: right;
+    width: 21rem;
+    margin-right: -1rem;
+  }
+
+  .chapter2__text--serif {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-top: -2rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .chapter2__text--thick {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-top: -2rem;
+    text-align: left;
+    margin-left: -2rem;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -955,6 +1045,7 @@ li {
 
   .chapter1__content--aetna {
     margin-bottom: 10rem;
+    margin-top: 8rem;
   }
 
   .chapter1__content--hypner {
@@ -988,8 +1079,42 @@ li {
     margin-bottom: 1.5rem;
   }
 
-  .chapter1__content--aetna {
-    margin-top: 8rem;
+
+
+  .chapter2__wrapper {
+    width: 80rem;
+  }
+
+  .chapter2__content--b {
+    width: 36rem;
+  }
+
+  .img__text {
+    font-size: 14rem;
+  }
+
+  .chapter2__text--axis {
+    width: max-content;
+    margin: 0;
+  }
+
+  .chapter2__text--main {
+    margin-left: 12rem;
+  }
+
+  .chapter2__text--serif {
+    margin-top: -3rem;
+    padding-left: 10rem;
+    width: max-content;
+  }
+
+  .chapter2__text--thick {
+    margin-top: -3rem;
+    margin-left: 6rem;
+  }
+
+  .chapter2__content--mobile {
+    display: none;
   }
 }
 
@@ -1040,5 +1165,9 @@ li {
 
   .chapter1__content--aetna {
     margin-top: 10rem;
+  }
+
+  .chapter2__wrapper {
+    width: 100rem;
   }
 }

@@ -377,46 +377,63 @@
                 </g>
               </g>
             </svg>
-            <div class="chapter2__content--0">
+            <div class="chapter2__content--0 chapter2__content--part">
 
             </div>
-            <div class="chapter2__content--1">
+            <div class="chapter2__content--1 chapter2__content--part">
               <div class="chapter2__content1--img">
                 <div class="img__text bembo">Old style</div>
               </div>
-              <p class="chapter2__content1--text chapter2__text--axis hidden ">
+              <div class="chapter2__content1--text chapter2__text--axis hidden chapter2__content--mobile ">
                 An axis drawn through the thinnest part of the round letters will lean to the left.
-              </p>
-              <p class="chapter2__content1--text chapter2__text--main">
+              </div>
+              <div class="chapter2__content1--text chapter2__text--axis hidden chapter2__content--desktop ">
+                An axis drawn through the <br> thinnest part of the round letters <br> will lean to the left.
+              </div>
+              <p class="chapter2__content1--text chapter2__text--main chapter2__content--mobile">
                 The main feature that distinguished the Griffo typeface from earlier typefaces
                 is the way the lower case stems protrude above the capital letter.
               </p>
-              <p class="chapter2__content1--text chapter2__text--thick chapter__content--desktop">
-                Little difference in thick and thin parts
+              <p class="chapter2__content1--text chapter2__text--main chapter2__content--desktop">
+                The main feature that distinguished <br> the Griffo typeface from earlier typefaces <br>
+                is the way the lower case stems protrude <br> above the capital letter.
               </p>
-              <p class="chapter2__content1--text chapter2__text--serif chapter__content--desktop hidden">
-                Short rounded serifs
+              <p class="chapter2__content1--text chapter2__text--thick chapter2__content--desktop">
+                Little difference in <br> thick and thin parts
               </p>
-              <p class="chapter2__content1--text chapter2__text--serif chapter__content--mobile hidden">
+              <p class="chapter2__content1--text chapter2__text--serif chapter2__content--desktop hidden">
+                Short rounded <br> serifs
+              </p>
+              <p class="chapter2__content1--text chapter2__text--serif chapter2__content--mobile hidden">
                 Short rounded serifs and a little difference in thick and thin parts
               </p>
-
+              <div class="chapter2__content1--pagination chapter2__content--mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+                </svg>
+              </div>
             </div>
-            <div class="chapter2__content--2 hidden">
-              <p class="chapter2__content2--text chapter__content--mobile">
+            <div class="chapter2__content--2 hidden chapter2__content--part">
+              <p class="chapter2__content2--text chapter2__content--mobile">
                 Griffo was inspired by the handwritten manuscripts of Classical antiquity.
                 The reason the letters have a tilted axis and letters contain lowercase serifs
                 is all because text used to be written with a flat pen. The pen can make thin and thick lines,
                 but will never make very thin lines. You can literally see the history in the letters.
               </p>
-              <p class="chapter2__content2--text chapter__content--desktop">
+              <p class="chapter2__content2--text chapter2__content--desktop">
                 Griffo was inspired <br> by the handwritten manuscripts <br> of Classical antiquity.
                 The reason the <br> letters have a tilted axis and letters <br> contain lowercase serifs
                 is all because text used to be written with a flat pen. <br> The pen can make thin and thick lines,<br>
                 but will never make very thin lines. <br> You can literally see the history in the letters.
               </p>
             </div>
-            <div class="chapter2__content--3 hidden">
+            <div class="chapter2__content--3 hidden chapter2__content--part">
               <p class="chapter2__content3--text">
                 When the letters are enlarged as much as they are here,
                 we start to see all kinds of <strong class="chapter__content--strong">oddities and eccentricities</strong>
