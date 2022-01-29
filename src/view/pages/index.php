@@ -185,7 +185,7 @@
       </div>
 
         <div id="chapter2" class="chapter__content  chapter2__content">
-          <div class="<?php if($_GET['part'] == 2){ echo 'chapter2__background2';} if($_GET['part'] == 3){ echo 'chapter2__background3';} ?>"> 
+          <div class="<?php if($_GET['part'] == 2){ echo 'chapter2__background2';} if($_GET['part'] == 3){ echo 'chapter2__background3';} ?>">
             <div class="chapter2__wrapper">
               <div class="chapter2__interaction">
                 <svg class="chapter2__content--b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="584" height="633" viewBox="0 0 584 633">
@@ -304,6 +304,20 @@
               <?php endif; ?>
         </div>
       </div>
+    </section>
+
+    <section class="chapter chapter3">
+        <h2 class="hidden">Chapter 3: Big in Time</h2>
+        <div class="chapter__title">
+            <div class="chapter__title--initial">
+              <img src="assets/img/svg/initial-t.svg" alt="initial">
+            </div>
+            <div class="chapter__title--text">Big in <span>Time</span></div>
+            <svg class="chapter__title--rect" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
+              <rect id="Rectangle_166" width="298" height="298" fill="#1dff00"/>
+            </svg>
+            <div class="chapter__title--chapter">Chapter 3</div>
+        </div>
     </section>
   </div>
 
