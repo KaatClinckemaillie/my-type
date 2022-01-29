@@ -356,13 +356,13 @@
           </div>
 
           <div class="slot__link">
-            <a class="slot__link--button" href="">
+            <a class="slot__link--button" href="https://www.slanted.de/">
               www.slanted.de
             </a>
             <a class="slot__link--button" href="">
               Discover Clarendon
             </a>
-            <a class="slot__link--button" href="">
+            <a class="slot__link--button" href="https://www.slanted.de/">
               www.slanted.de
             </a>
           </div>
