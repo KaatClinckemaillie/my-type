@@ -874,6 +874,10 @@ li {
 
   .img__text {
     margin-left: 0;
+    background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-1.svg), url(assets/img/svg/color-2.svg), url(assets/img/svg/color-3.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 80px, 360px, 210px;
+    background-position: top, 20px -50px, 135px top, 130px 30px;
   }
 
   .chapter2__content--b {
@@ -1079,8 +1083,6 @@ li {
     margin-bottom: 1.5rem;
   }
 
-
-
   .chapter2__wrapper {
     width: 80rem;
   }
@@ -1091,6 +1093,10 @@ li {
 
   .img__text {
     font-size: 14rem;
+    background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-1.svg), url(assets/img/svg/color-2.svg), url(assets/img/svg/color-3.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 100px, 505px, 300px;
+    background-position: top, 40px -50px, 185px top, 170px 50px;
   }
 
   .chapter2__text--axis {
