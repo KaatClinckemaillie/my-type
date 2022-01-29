@@ -395,6 +395,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 3rem;
 }
 
 .chapter2__content--b {
@@ -454,7 +455,7 @@ li {
   background-color: var(--colorAccent);
 }
 
-.chapter2__background2 > .chapter2__wrapper > .chapter2__content--b > g > .outline {
+.chapter2__background2 > .chapter2__wrapper > .chapter2__interaction > .chapter2__content--b > g > .outline {
   stroke: var(--colorWhite);
 }
 
@@ -462,11 +463,11 @@ li {
   padding-top: 4rem;
 }
 
-.chapter2__background3 > .chapter2__wrapper > .chapter2__content--b > g > .outline {
+.chapter2__background3 > .chapter2__wrapper > .chapter2__interaction > .chapter2__content--b > g > .outline {
   stroke: var(--colorWhite);
 }
 
-.chapter2__background3 > .chapter2__wrapper > .chapter2__content--b > g > g {
+.chapter2__background3 > .chapter2__wrapper > .chapter2__interaction > .chapter2__content--b > g > g {
   stroke: var(--colorWhite);
 }
 
@@ -841,13 +842,27 @@ li {
     margin: 0;
   }
 
+  .img__text {
+    margin-left: 0;
+    background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-1.svg), url(assets/img/svg/color-2.svg), url(assets/img/svg/color-3.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 60px, 240px, 130px;
+    background-position: top, 10px -50px, 85px top, 85px 25px;
+  }
+
+  .chapter2__content1--text {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
   .chapter2__content3--letter > img {
     width: 10vw;
   }
 
   .chapter2__content3--text {
-    width: 30vw;
-    margin-top: 0;
+    width: 50vw;
+    margin: auto;
     margin-bottom: 2rem;
   }
   /*   CHAPTER 1 CHAPTER 1 CHAPTER 1 */
@@ -1015,19 +1030,19 @@ li {
     margin-right: 0;
   }
 
+  .chapter2__content--1 {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content max-content;
+    margin-top: 2rem;
+  }
+
   .chapter2__content--desktop {
     display: block;
   }
 
   .chapter2__content--mobile {
     display: none;
-  }
-
-  .chapter2__content--1 {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    grid-template-rows: max-content max-content max-content;
-    margin-top: 2rem;
   }
 
   .chapter2__content1--text {
@@ -1095,6 +1110,10 @@ li {
 
   .chapter2__content3--letters {
     width: 25rem;
+  }
+
+  .chapter2__content3--letter > img {
+    width: 9rem;
   }
 
   .hidden {
