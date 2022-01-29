@@ -387,6 +387,43 @@ li {
   text-align: center;
 }
 
+/* CHAPTER 2 CHAPTER 2 CHAPTER 2 */
+
+.chapter2__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chapter2__content--b {
+  width: 15rem;
+  height: max-content;
+  margin: auto;
+}
+
+.chapter2__content1--img {
+  margin-top: 4rem;
+  font-size: 6.5rem;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.img__text {
+  width: max-content;
+  margin-left: -1rem;
+  background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 235px;
+  background-position: top, 88px top;
+}
+
+.chapter2__content1--text {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 2rem;
+}
+
 .hidden {
   display: none;
 }
