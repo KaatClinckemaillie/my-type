@@ -185,27 +185,12 @@
       </div>
 
         <div id="chapter2" class="chapter__content  chapter2__content">
-          <div class="<?php if($_GET['part'] == 2){ echo 'chapter2__background2';} if($_GET['part'] == 3){ echo 'chapter2__background3';} ?>"> <!-- of 2 of geen chapter2__background3 -->
+          <div class="<?php if($_GET['part'] == 2){ echo 'chapter2__background2';} if($_GET['part'] == 3){ echo 'chapter2__background3';} ?>"> 
             <div class="chapter2__wrapper">
               <div class="chapter2__interaction">
                 <svg class="chapter2__content--b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="584" height="633" viewBox="0 0 584 633">
                   <g id="Group_312" data-name="Group 312" transform="translate(-1112 -6008)">
                     <path class="outline" id="Path_240" data-name="Path 240" d="M121-101c0,63-16,82-98,82H0V0H366C527,0,582-111,582-190c0-78-55-139-149-167v-2c67-12,114-65,114-122,0-48-20-82-61-111-36-26-113-39-201-39-19,0-95,1-150,3-29,1-98,5-126,6v19H44c70,0,77,30,77,87Zm83-508c25-1,66-3,88-3,123,0,165,64,165,134,0,78-48,116-144,116H204Zm0,266H312c117,0,176,79,176,156,0,78-38,160-170,160-84,0-114-27-114-103Z" transform="translate(1113 6640)" fill="none" stroke="#000" stroke-width="2"/>
-<!--
-                      <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(1202 6066)" fill="none" stroke="#1dff00" stroke-width="3">
-                        <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
-                        <circle cx="33.5" cy="33.5" r="32" fill="none"/>
-                      </g>
-
-                      <g id="Ellipse_35" data-name="Ellipse 35" transform="translate(1618 6088)" fill="none" stroke="#1dff00" stroke-width="3">
-                        <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
-                        <circle cx="33.5" cy="33.5" r="32" fill="none"/>
-                      </g>
-                    <g id="Ellipse_36" data-name="Ellipse 36" transform="translate(1606 6546)" fill="none" stroke="#1dff00" stroke-width="3">
-                      <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
-                      <circle cx="33.5" cy="33.5" r="32" fill="none"/>
-                    </g> -->
-                  </g>
                 </svg>
                 <a class="interaction__link interaction__link--1" href="index.php?part=1#chapter2">
                   <svg class="interaction__link--svg"  width="67" height="67" viewBox="0 0 67 67">
