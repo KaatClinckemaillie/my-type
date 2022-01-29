@@ -334,5 +334,39 @@
 
     </section>
   </div>
+    <section class="slot">
+      <div class="slot__title">
+        <h2>Next week</h2>
+        <p>To be continued</p>
+      </div>
+
+        <div class="slot__font">
+          <div class="slot__font--thisWeek">Slanted</div>
+          <div class="slot__font--newtWeek">Next week: Futura</div>
+        </div>
+
+        <div class="fonts">
+          <ol>
+            <li>Clarendon</li>
+            <li>Bembo</li>
+            <li>Futura (from 7 February)</li>
+            <li>Caslon (from 14 February)</li>
+            <li>Bodoni (from 21 February)</li>
+          </ol>
+        </div>
+
+        <div class="slot__link">
+          <a href="">
+            <div>www.slanted.de</div>
+          </a>
+          <a href="">
+            <div>Discover Clarendon</div>
+          </a>
+          <a href="">
+            <div>www.slanted.de</div>
+          </a>
+        </div>
+    </section>
+
 
 </section>
