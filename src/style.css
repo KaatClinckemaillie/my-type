@@ -1293,6 +1293,71 @@ footer > p {
     background-size: 1000px;
   }
 
+  .slot__content {
+    width: 60rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .slot__font {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .fonts {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .slot__font--thisWeek {
+    font-size: 10rem;
+  }
+
+  .slot__font--nextWeek {
+    font-size: 2.5rem;
+    margin-top: -1rem;
+  }
+
+  .font {
+    margin-left: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .slot__link {
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
+    align-items: flex-start;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+
+  .slot__link--button {
+    font-size: 2.5rem;
+    padding: .2rem 3rem .5rem;
+    border: .1rem white solid;
+  }
+
+  .slot__link--button:nth-child(2) {
+    transform: translate(60px, 0);
+  }
+
+  .slot__title {
+    padding: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .slot__title--big {
+    font-size: 6rem;
+  }
+
+  .slot__title--small {
+    font-size: 2rem;
+    margin-bottom: -1rem;
+  }
+
   .hidden {
     display: none;
   }
@@ -1502,6 +1567,16 @@ footer > p {
   .chapter3__content {
     background-size: 1300px;
   }
+
+  .slot__content {
+    width: 80rem;
+  }
+
+  .slot__font--thisWeek {
+    font-size: 15rem;
+  }
+
+
 
 }
 

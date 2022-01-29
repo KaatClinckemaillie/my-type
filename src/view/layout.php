@@ -14,5 +14,8 @@
       <?php echo $content;?>
   </div>
   <?php echo $js; ?>
+<footer>
+  <p>© slanted publishers 2022 x Kaat Clinckemaillie </p>
+</footer>
 </body>
 </html>

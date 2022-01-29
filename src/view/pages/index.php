@@ -372,6 +372,4 @@
 
 </section>
 
-<footer>
-  <p>© slanted publishers 2022 x Kaat Clinckemaillie </p>
-</footer>
+
