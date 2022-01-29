@@ -318,6 +318,18 @@
             </svg>
             <div class="chapter__title--chapter">Chapter 3</div>
         </div>
+        <div class="chapter__content  chapter3__content">
+          <p class="chapter__content--p chapter3__content--p">
+            Griffo made a font that is <strong class="chapter__content--strong accent">big in Time</strong>. Bembo served as a source of inspiration for many other designers.
+            In 1929 Stanley Morison redesigned Bembo for Monotype, and from then on <strong class="chapter__content--strong accent"> a new era of splendor began </strong> for this typeface.
+            Even the well-known German type designer Jan Tschichold was inspired by the books made by Manutius and Griffo more than 400 years ago.
+          </p>
+          <p class="chapter__content--p chapter3__content--p">
+            In the course of the 20th century until now, Bembo has become a font associated with <strong>culture and elegance </strong>. Everywhere you
+            come across Bembo and followers of the Bembo font. That Bembo is Big Time has now been proven.
+          </p>
+        </div>
+
     </section>
   </div>
 
