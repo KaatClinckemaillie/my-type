@@ -351,111 +351,114 @@
           </svg>
           <div class="chapter__title--chapter">Chapter 2</div>
       </div>
-      <div class="chapter__content  chapter2__content">
-          <div class="chapter__title-s chapter2__title-s">
-            <div class="chapter__title--text-s">Big in <span class="bembo">Beauty</span></div>
-              <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
-                <rect id="Rectangle_166" width="298" height="298" fill="#000"/>
-              </svg>
-            <div class="chapter__title--chapter-s">Chapter 2</div>
-          </div>
-          <div class="chapter2__wrapper chapter2__wrapper--part2">
-            <svg class="chapter2__content--b" xmlns="http://www.w3.org/2000/svg" width="584" height="633" viewBox="0 0 584 633">
-              <g id="Group_312" data-name="Group 312" transform="translate(-1112 -6008)">
-                <path class="outline" id="Path_240" data-name="Path 240" d="M121-101c0,63-16,82-98,82H0V0H366C527,0,582-111,582-190c0-78-55-139-149-167v-2c67-12,114-65,114-122,0-48-20-82-61-111-36-26-113-39-201-39-19,0-95,1-150,3-29,1-98,5-126,6v19H44c70,0,77,30,77,87Zm83-508c25-1,66-3,88-3,123,0,165,64,165,134,0,78-48,116-144,116H204Zm0,266H312c117,0,176,79,176,156,0,78-38,160-170,160-84,0-114-27-114-103Z" transform="translate(1113 6640)" fill="none" stroke="#000" stroke-width="2"/>
-                <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(1202 6066)" fill="none" stroke="#1dff00" stroke-width="3">
-                  <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
-                  <circle cx="33.5" cy="33.5" r="32" fill="none"/>
-                </g>
-                <g id="Ellipse_35" data-name="Ellipse 35" transform="translate(1618 6088)" fill="none" stroke="#1dff00" stroke-width="3">
-                  <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
-                  <circle cx="33.5" cy="33.5" r="32" fill="none"/>
-                </g>
-                <g id="Ellipse_36" data-name="Ellipse 36" transform="translate(1606 6546)" fill="none" stroke="#1dff00" stroke-width="3">
-                  <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
-                  <circle cx="33.5" cy="33.5" r="32" fill="none"/>
-                </g>
-              </g>
-            </svg>
-            <div class="chapter2__content--0 chapter2__content--part">
 
-            </div>
-            <div class="chapter2__content--1 chapter2__content--part hidden">
-              <div class="chapter2__content1--img">
-                <div class="img__text bembo">Old style</div>
-              </div>
-              <div class="chapter2__content1--text chapter2__text--axis hidden chapter2__content--mobile ">
-                An axis drawn through the thinnest part of the round letters will lean to the left.
-              </div>
-              <div class="chapter2__content1--text chapter2__text--axis hidden chapter2__content--desktop ">
-                An axis drawn through the <br> thinnest part of the round letters <br> will lean to the left.
-              </div>
-              <p class="chapter2__content1--text chapter2__text--main chapter2__content--mobile">
-                The main feature that distinguished the Griffo typeface from earlier typefaces
-                is the way the lower case stems protrude above the capital letter.
-              </p>
-              <p class="chapter2__content1--text chapter2__text--main chapter2__content--desktop">
-                The main feature that distinguished <br> the Griffo typeface from earlier typefaces <br>
-                is the way the lower case stems protrude <br> above the capital letter.
-              </p>
-              <p class="chapter2__content1--text chapter2__text--thick chapter2__content--desktop">
-                Little difference in <br> thick and thin parts
-              </p>
-              <p class="chapter2__content1--text chapter2__text--serif chapter2__content--desktop hidden">
-                Short rounded <br> serifs
-              </p>
-              <p class="chapter2__content1--text chapter2__text--serif chapter2__content--mobile hidden">
-                Short rounded serifs and a little difference in thick and thin parts
-              </p>
-              <div class="chapter2__content1--pagination chapter2__content--mobile">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                  <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+        <div class="chapter__content  chapter2__content">
+            <div class="chapter__title-s chapter2__title-s">
+              <div class="chapter__title--text-s">Big in <span class="bembo">Beauty</span></div>
+                <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
+                  <rect id="Rectangle_166" width="298" height="298" fill="#000"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                  <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                  <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
-                </svg>
+              <div class="chapter__title--chapter-s">Chapter 2</div>
+        </div>
+          <div class="chapter2__background2">
+            <div class="chapter2__wrapper chapter2__wrapper--part2 ">
+              <svg class="chapter2__content--b" xmlns="http://www.w3.org/2000/svg" width="584" height="633" viewBox="0 0 584 633">
+                <g id="Group_312" data-name="Group 312" transform="translate(-1112 -6008)">
+                  <path class="outline" id="Path_240" data-name="Path 240" d="M121-101c0,63-16,82-98,82H0V0H366C527,0,582-111,582-190c0-78-55-139-149-167v-2c67-12,114-65,114-122,0-48-20-82-61-111-36-26-113-39-201-39-19,0-95,1-150,3-29,1-98,5-126,6v19H44c70,0,77,30,77,87Zm83-508c25-1,66-3,88-3,123,0,165,64,165,134,0,78-48,116-144,116H204Zm0,266H312c117,0,176,79,176,156,0,78-38,160-170,160-84,0-114-27-114-103Z" transform="translate(1113 6640)" fill="none" stroke="#000" stroke-width="2"/>
+                  <g id="Ellipse_34" data-name="Ellipse 34" transform="translate(1202 6066)" fill="none" stroke="#1dff00" stroke-width="3">
+                    <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
+                    <circle cx="33.5" cy="33.5" r="32" fill="none"/>
+                  </g>
+                  <g id="Ellipse_35" data-name="Ellipse 35" transform="translate(1618 6088)" fill="none" stroke="#1dff00" stroke-width="3">
+                    <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
+                    <circle cx="33.5" cy="33.5" r="32" fill="none"/>
+                  </g>
+                  <g id="Ellipse_36" data-name="Ellipse 36" transform="translate(1606 6546)" fill="none" stroke="#1dff00" stroke-width="3">
+                    <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
+                    <circle cx="33.5" cy="33.5" r="32" fill="none"/>
+                  </g>
+                </g>
+              </svg>
+              <div class="chapter2__content--0 chapter2__content--part">
+
+              </div>
+              <div class="chapter2__content--1 chapter2__content--part hidden">
+                <div class="chapter2__content1--img">
+                  <div class="img__text bembo">Old style</div>
+                </div>
+                <div class="chapter2__content1--text chapter2__text--axis hidden chapter2__content--mobile ">
+                  An axis drawn through the thinnest part of the round letters will lean to the left.
+                </div>
+                <div class="chapter2__content1--text chapter2__text--axis hidden chapter2__content--desktop ">
+                  An axis drawn through the <br> thinnest part of the round letters <br> will lean to the left.
+                </div>
+                <p class="chapter2__content1--text chapter2__text--main chapter2__content--mobile">
+                  The main feature that distinguished the Griffo typeface from earlier typefaces
+                  is the way the lower case stems protrude above the capital letter.
+                </p>
+                <p class="chapter2__content1--text chapter2__text--main chapter2__content--desktop">
+                  The main feature that distinguished <br> the Griffo typeface from earlier typefaces <br>
+                  is the way the lower case stems protrude <br> above the capital letter.
+                </p>
+                <p class="chapter2__content1--text chapter2__text--thick chapter2__content--desktop">
+                  Little difference in <br> thick and thin parts
+                </p>
+                <p class="chapter2__content1--text chapter2__text--serif chapter2__content--desktop hidden">
+                  Short rounded <br> serifs
+                </p>
+                <p class="chapter2__content1--text chapter2__text--serif chapter2__content--mobile hidden">
+                  Short rounded serifs and a little difference in thick and thin parts
+                </p>
+                <div class="chapter2__content1--pagination chapter2__content--mobile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                    <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                    <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                    <circle cx="8.5" cy="8.5" r="8" fill="none" stroke="#000" stroke-width="1"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="chapter2__content--2 chapter2__content--part">
+                <p class="chapter2__content2--text chapter2__content--mobile">
+                  Griffo was inspired by the handwritten manuscripts <br> of Classical antiquity.
+                  The reason the letters have a tilted axis and letters contain lowercase serifs
+                  is all because text used to be written with a <strong class="accent chapter__content--strong">flat pen</strong>. The pen can make thin and thick lines,
+                  but will never make very thin lines. <strong class="bembo italic">You can literally see the history in the letters.</strong>
+                </p>
+                <p class="chapter2__content2--text chapter2__content--desktop">
+                  Griffo was inspired <br> by the handwritten manuscripts <br> of Classical antiquity.
+                  The reason the <br> letters have a tilted axis and letters <br> contain lowercase serifs
+                  is all because <br> text used to be written with a <strong class="accent chapter__content--strong">flat pen</strong>. <br> The pen can make thin and thick lines,<br>
+                  but will never make very thin lines. <strong class="bembo italic"><br> You can literally see the history <br> in the letters.</strong>
+                </p>
+              </div>
+              <div class="chapter2__content--3 hidden chapter2__content--part">
+                <p class="chapter2__content3--text">
+                  When the letters are enlarged as much as they are here,
+                  we start to see all kinds of <strong class="chapter__content--strong">oddities and eccentricities</strong>
+                  that are invisible at normal sizes
+                </p>
+                <div class="chapter2__content3--r">
+                  <img src="" alt="">
+                  <p>The branch of the r quivers a bi</p>
+                </div>
+                <div class="chapter2__content3--e">
+                  <img src="" alt="">
+                  <p>e has a slight ear on top of the eye</p>
+                </div>
+                <p class="chapter2__content3--text">
+                  This is because a perfect uniform lettertype would be difficult to
+                  read for long. It would look pretty sterile, even borgin, set in the massive
+                  blocks of text that make up books. It’s because of its eccentrices that Bebmo
+                  looks so beautiful on the page. The variations in the individual letters provide color,
+                  rhythm and the flow that this font is known for.
+                </p>
               </div>
             </div>
-            <div class="chapter2__content--2 chapter2__content--part">
-              <p class="chapter2__content2--text chapter2__content--mobile">
-                Griffo was inspired by the handwritten manuscripts <br> of Classical antiquity.
-                The reason the letters have a tilted axis and letters contain lowercase serifs
-                is all because text used to be written with a <strong class="accent chapter__content--strong">flat pen</strong>. The pen can make thin and thick lines,
-                but will never make very thin lines. <strong class="bembo italic">You can literally see the history in the letters.</strong>
-              </p>
-              <p class="chapter2__content2--text chapter2__content--desktop">
-                Griffo was inspired <br> by the handwritten manuscripts <br> of Classical antiquity.
-                The reason the <br> letters have a tilted axis and letters <br> contain lowercase serifs
-                is all because text used to be written with a flat pen. <br> The pen can make thin and thick lines,<br>
-                but will never make very thin lines. <br> You can literally see the history in the letters.
-              </p>
-            </div>
-            <div class="chapter2__content--3 hidden chapter2__content--part">
-              <p class="chapter2__content3--text">
-                When the letters are enlarged as much as they are here,
-                we start to see all kinds of <strong class="chapter__content--strong">oddities and eccentricities</strong>
-                that are invisible at normal sizes
-              </p>
-              <div class="chapter2__content3--r">
-                <img src="" alt="">
-                <p>The branch of the r quivers a bi</p>
-              </div>
-              <div class="chapter2__content3--e">
-                <img src="" alt="">
-                <p>e has a slight ear on top of the eye</p>
-              </div>
-              <p class="chapter2__content3--text">
-                This is because a perfect uniform lettertype would be difficult to
-                read for long. It would look pretty sterile, even borgin, set in the massive
-                blocks of text that make up books. It’s because of its eccentrices that Bebmo
-                looks so beautiful on the page. The variations in the individual letters provide color,
-                rhythm and the flow that this font is known for.
-              </p>
-            </div>
-          </div>
+        </div>
       </div>
     </section>
   </div>

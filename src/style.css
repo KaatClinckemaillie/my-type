@@ -443,14 +443,18 @@ li {
   display: none;
 }
 
-.chapter2__wrapper--part2 {
+.chapter2__background2 {
   background-color: var(--colorBlack);
-  height: 100vh;
+  width: 100%;
   color: white;
 }
 
-.chapter2__wrapper--part2 > .chapter2__content--b > g > .outline {
+.chapter2__background2 > .chapter2__wrapper > .chapter2__content--b > g > .outline {
   stroke: var(--colorWhite);
+}
+
+.chapter2__background2 > .chapter2__wrapper > .chapter2__content--b {
+  padding-top: 4rem;
 }
 
 .chapter2__content2--text {
@@ -460,7 +464,9 @@ li {
   width: 19rem;
   margin: auto;
   margin-bottom: 2rem;
+  margin-top: 5rem;
 }
+
 
 .hidden {
   display: none;
@@ -744,6 +750,22 @@ li {
     display: none;
   }
 
+  .chapter2__wrapper--part2 {
+    height: 100vh;
+  }
+
+
+  .chapter2__wrapper--part2 {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .chapter2__content2--text {
+    margin-left: 7rem;
+  }
+
   /*   CHAPTER 1 CHAPTER 1 CHAPTER 1 */
 
   .chapter1__content--end {
@@ -768,13 +790,9 @@ li {
     grid-template-rows: repeat(20, 40px);
   }
 
-  .chapter__content {
-    margin: 2rem;
-  }
-
   .chapter__title-s {
     margin-top: 1rem;
-    margin-right: 0;
+    margin-right: 2rem;
     margin-bottom: 10rem;
   }
 
@@ -969,6 +987,20 @@ li {
     margin-left: -2rem;
   }
 
+  .chapter2__content2--text {
+    width: max-content;
+    margin: auto;
+    margin-left: 5rem;
+    background-color: var(--colorBlack);
+  }
+
+  .chapter2__background2 {
+    background-image: url(assets/img/svg/part2-bg.svg);
+    background-size: 66vw;
+    background-repeat: no-repeat;
+    background-position: -5vw center;
+  }
+
   .hidden {
     display: none;
   }
@@ -1022,10 +1054,6 @@ li {
   .prologue__paintings {
     grid-template-columns: repeat(36, 50px);
     grid-template-rows: repeat(20, 50px);
-  }
-
-  .chapter__content {
-    margin: 5rem;
   }
 
   .chapter1__content--aldus {
@@ -1099,8 +1127,8 @@ li {
   }
 
   .chapter__title-s {
-    margin-top: -1rem;
-    margin-right: -2rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
     margin-bottom: 10rem;
   }
 
@@ -1152,9 +1180,14 @@ li {
     display: none;
   }
 
-  .hidden {
-    display: none;
+  .chapter2__content2--text {
+    font-size: calc(32px + (48 - 32) * ((100vw - 1440px) / (2560 - 1440)));
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-left: calc(32px + (-144 - 32) * ((100vw - 1440px) / (2560 - 1440)));
+
   }
+
 }
 
 @media only screen and (min-width: 2560px) {
