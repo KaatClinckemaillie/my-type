@@ -2,7 +2,27 @@
 
   <header class="menu hidden">
     <h1 class="pagetitle hidden">Bembo Big Time</h1>
-    <a href="" class="menu__link">MENU</a>
+    <div>
+      <h2>Contents</h2>
+      <nav>
+        <ul>
+          <li>Prologue</li>
+          <li>
+            chapter1
+            <div>Big in History</div>
+          </li>
+          <li>
+            chapter2
+            <div>Big in Beauty</div>
+          </li>
+          <li>
+            chapter3
+            <div>Big in Time</div>
+          </li>
+          <li>Next week</li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- <div class="header__transition"> -->
     <div class="header zoom">
