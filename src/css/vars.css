@@ -9,12 +9,12 @@
   --colorBlack: black;
   --colorAccent: #1dff00;
   --colorGrey: #ebebeb;
-  --s-0: 1rem;
-  --s-1: 1.5rem;
-  --s-2: 2rem;
+  --colorDarkGrey: #767474;
   --fontPrimary: bembo, serif;
   --fontSecundary: gill-sans-nova, sans-serif;
+  --fontFutura: futura-pt, sans-serif;
   --fontWeightLight: 300;
   --fontWeightRegular: 400;
   --fontWeightBold: 700;
+  --fontWeightMedium: 500;
 }

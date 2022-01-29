@@ -336,37 +336,42 @@
   </div>
     <section class="slot">
       <div class="slot__title">
-        <h2>Next week</h2>
-        <p>To be continued</p>
+        <h2 class="slot__title--big">Next week</h2>
+        <p class="slot__title--small">To be continued...</p>
       </div>
+        <div class="slot__content">
+          <div class="slot__font">
+            <div class="slot__font--thisWeek bembo">Slanted</div>
+            <div class="slot__font--nextWeek">Next week: <strong class="futura accent">Futura</strong></div>
+          </div>
 
-        <div class="slot__font">
-          <div class="slot__font--thisWeek">Slanted</div>
-          <div class="slot__font--newtWeek">Next week: Futura</div>
-        </div>
+          <div class="fonts">
+            <ol>
+              <li class="font">1. Clarendon</li>
+              <li class="font green">2. Bembo</li>
+              <li class="font grey">3. Futura <span class="font__date">(from 7 February)</span></li>
+              <li class="font grey">4. Caslon <span class="font__date">(from 14 February)</span></li>
+              <li class="font grey">5. Bodoni <span class="font__date">(from 21 February)</span></li>
+            </ol>
+          </div>
 
-        <div class="fonts">
-          <ol>
-            <li>Clarendon</li>
-            <li>Bembo</li>
-            <li>Futura (from 7 February)</li>
-            <li>Caslon (from 14 February)</li>
-            <li>Bodoni (from 21 February)</li>
-          </ol>
-        </div>
-
-        <div class="slot__link">
-          <a href="">
-            <div>www.slanted.de</div>
-          </a>
-          <a href="">
-            <div>Discover Clarendon</div>
-          </a>
-          <a href="">
-            <div>www.slanted.de</div>
-          </a>
+          <div class="slot__link">
+            <a class="slot__link--button" href="">
+              www.slanted.de
+            </a>
+            <a class="slot__link--button" href="">
+              Discover Clarendon
+            </a>
+            <a class="slot__link--button" href="">
+              www.slanted.de
+            </a>
+          </div>
         </div>
     </section>
 
 
 </section>
+
+<footer>
+  <p>© slanted publishers 2022 x Kaat Clinckemaillie </p>
+</footer>
