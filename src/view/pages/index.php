@@ -209,7 +209,7 @@
                 </svg>
                 <a class="interaction__link interaction__link--1" href="index.php?part=1#chapter2">
                   <svg class="interaction__link--svg"  width="67" height="67" viewBox="0 0 67 67">
-                    <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 1){ echo '#fff';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
+                    <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 1){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
                       <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
                       <circle cx="33.5" cy="33.5" r="32" fill="none"/>
                     </g>
@@ -217,7 +217,7 @@
                 </a>
                 <a class="interaction__link interaction__link--2" href="index.php?part=2#chapter2">
                   <svg class="interaction__link--svg" width="67" height="67" viewBox="0 0 67 67">
-                    <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 1){ echo '#fff';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
+                    <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 2){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
                       <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
                       <circle cx="33.5" cy="33.5" r="32" fill="none"/>
                     </g>
@@ -225,7 +225,7 @@
                 </a>
                 <a class="interaction__link interaction__link--3" href="index.php?part=3#chapter2">
                   <svg class="interaction__link--svg" xmlns="http://www.w3.org/2000/svg" width="67" height="67" viewBox="0 0 67 67">
-                    <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 1){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
+                    <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
                       <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
                       <circle cx="33.5" cy="33.5" r="32" fill="none"/>
                     </g>
