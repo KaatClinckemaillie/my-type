@@ -183,7 +183,7 @@ export const init = () => {
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
 
-  //initScrollTrigger();
+  initScrollTrigger();
 
 
 
