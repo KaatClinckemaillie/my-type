@@ -2,7 +2,7 @@ import {random} from './functions/lib.js';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
-jj
+
 //header
 const $header = document.querySelector('.header');
 const $headerBg = document.querySelector('.header__bg');
@@ -91,6 +91,7 @@ const shuffle = array => {
 
 const resizeWindow = () => {
   console.log('resize');
+  initScrollTrigger();
 };
 
 const initScrollTrigger = () => {
@@ -104,7 +105,6 @@ const initScrollTrigger = () => {
       start: 'top top',
       end: 'bottom 50%',
       scrub: 1,
-      markers: true,
       pinSpacing: false
     }
   });
@@ -130,9 +130,9 @@ const initScrollTrigger = () => {
     scrollTrigger: {
       trigger: '.prologue',
       pin: true,
-      markers: true,
       start: 'top top',
-      scrub: 1
+      scrub: 1,
+      pinSpacing: false
     }
   });
 
@@ -149,6 +149,32 @@ const initScrollTrigger = () => {
     .set('.prologue__paintings', {
       display: 'none'
     });
+
+  gsap.set('.chapter__title--text', {x: - 400});
+  gsap.set('.chapter__title--rect', {opacity: 0});
+  gsap.set('.chapter__title--chapter', {x: 200});
+  const tlTitle = gsap.timeline();
+  tlTitle.to('.chapter__title--text', {x: 0, duration: 3}, 0)
+    .to('.chapter__title--chapter', {x: 0, duration: 3}, 0)
+    .to('.chapter__title--rect', {opacity: 1, duration: 2});
+
+  ScrollTrigger.create({
+    animation: tlTitle,
+    trigger: '.chapter__title',
+    start: 'top top',
+    scrub: 1,
+    pin: '.chapter__title',
+  });
+
+  gsap.to('.punchcutter__white--fill', {
+    scrollTrigger: {
+      trigger: '.chapter1__content--aetna',
+      start: 'top top',
+      markers: true
+    },
+    height: 1500,
+    duration: 10});
+
 };
 
 export const init = () => {

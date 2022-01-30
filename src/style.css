@@ -292,6 +292,7 @@ li {
   overflow: hidden;
   display: grid;
   place-content: center;
+  z-index: 3;
 }
 
 .prologue__paintings {
@@ -1542,7 +1543,7 @@ li {
   }
 
   .header__title--text {
-    margin-top: -1rem;
+    margin-top: 2rem;
     margin-left: .2rem;
   }
 
@@ -1557,7 +1558,7 @@ li {
 
   .header__title--small {
     font-size: 4rem;
-    margin-bottom: -4rem;
+    margin-bottom: -3rem;
   }
 
   .header__title--cta {
@@ -1754,12 +1755,13 @@ li {
   }
 
   .header__title--text {
-    margin-top: 2rem;
+    margin: 0;
+    margin-top: 7rem;
   }
 
   .header__title--small {
     font-size: 7rem;
-    margin-bottom: -5.5rem;
+    margin-bottom: -3.5rem;
   }
 
   .header__title--cta {
