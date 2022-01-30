@@ -1,7 +1,6 @@
 <section class="content">
   <h1 class="pagetitle hidden">Bembo Big Time</h1>
-  <!-- <div class="header__transition"> -->
-    <header class="header zoom">
+    <header class="header zoom" id="home">
       <div class="header__title">
         <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="260" height="280" viewBox="0 0 335.5 357.172">
           <g id="initial" transform="translate(0 -59.702)">
@@ -86,7 +85,7 @@
       <svg class="chapter1__title--line" xmlns="http://www.w3.org/2000/svg" width="1" height="300" viewBox="0 0 1 299.416">
         <path id="Path_195" data-name="Path 195" d="M-4638,13797.584V14097" transform="translate(4638.5 -13797.584)" fill="none" stroke="#000" stroke-width="1"/>
       </svg>
-      <div class="chapter__content  chapter1__content">
+      <div class="chapter__content  chapter1__content" id="chapter1">
           <div class="chapter__title-s chapter1__title-s">
             <div class="chapter__title--text-s">Big in <span class="bembo">History</span></div>
               <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
@@ -302,7 +301,7 @@
       </div>
     </section>
 
-    <section class="chapter chapter3">
+    <section class="chapter chapter3" id="chapter3">
         <h2 class="hidden">Chapter 3: Big in Time</h2>
         <div class="chapter__title chapter3__title">
             <div class="chapter__title--initial">
@@ -330,7 +329,7 @@
 
     </section>
   </div>
-    <section class="slot">
+    <section class="slot" id="end">
       <div class="slot__title">
         <h2 class="slot__title--big">Next week</h2>
         <p class="slot__title--small">To be continued...</p>
