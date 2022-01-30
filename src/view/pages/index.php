@@ -1,5 +1,5 @@
 <section class="content">
-  <h1 class="pagetitle hidden">Bembo Big Time</h1>
+  <h1 class="pagetitle hidden"><?php echo $intro_title; ?></h1>
     <header class="header zoom" id="home">
       <div class="header__title">
         <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="260" height="280" viewBox="0 0 335.5 357.172">
@@ -43,12 +43,12 @@
           </g>
         </svg>
         <div class="header__title--text">
-          <p class="header__title--small">Big time</p>
-          <p class="header__title--big"><span class="hidden">B</span>embo</p>
+          <p class="header__title--small"><?php echo $intro_subtitle;?></p>
+          <p class="header__title--big"><?php echo $intro_bembo;?></p>
         </div>
       </div>
       <div class="header__bg">
-        <p class="header__title--cta">Scroll to delve into Bembo</p>
+        <p class="header__title--cta"><?php echo $intro_cta; ?></p>
         <div class="header__bg--whitespace"></div>
       </div>
 
@@ -71,81 +71,62 @@
 
     <div class="chapters">
       <section class="chapter chapter1">
-        <h2 class="hidden">Chapter 1: Big in History</h2>
+        <h2 class="hidden"><?php echo $chapter1_chapter . ':' . $chapter1_title?></h2>
         <div class="chapter__title">
             <div class="chapter__title--initial">
               <img src="assets/img/svg/initial-h.svg" alt="initial">
             </div>
-            <div class="chapter__title--text">Big in <span>History</span></div>
+            <div class="chapter__title--text"><?php echo $chapter1_title; ?></div>
             <svg class="chapter__title--rect" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
               <rect id="Rectangle_166" width="298" height="298" fill="#1dff00"/>
             </svg>
-            <div class="chapter__title--chapter">Chapter 1</div>
+            <div class="chapter__title--chapter"><?php echo $chapter1_chapter;?></div>
         </div>
         <svg class="chapter1__title--line" xmlns="http://www.w3.org/2000/svg" width="1" height="300" viewBox="0 0 1 299.416">
           <path id="Path_195" data-name="Path 195" d="M-4638,13797.584V14097" transform="translate(4638.5 -13797.584)" fill="none" stroke="#000" stroke-width="1"/>
         </svg>
         <div class="chapter__content  chapter1__content" id="chapter1">
             <div class="chapter__title-s chapter1__title-s">
-              <div class="chapter__title--text-s">Big in <span class="bembo">History</span></div>
+              <div class="chapter__title--text-s"><?php echo $chapter1_title; ?></div>
                 <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
                   <rect id="Rectangle_166" width="298" height="298" fill="#000"/>
                 </svg>
-              <div class="chapter__title--chapter-s">Chapter 1</div>
+              <div class="chapter__title--chapter-s"><?php echo $chapter1_chapter;?></div>
             </div>
             <div class="chapter1__content--aldus">
-              <p class="chapter__content--p">
-                Bembo is <strong class="chapter__content--strong accent">big in history</strong>.
-                To go back to the origin of the font, we go back to the time where Colombus
-                discovered a new continent and where Leonardo Da Vinci painted the Last Supper.
-                We go back to <strong class="chapter__content--strong accent">the Renaissance.</strong>
-              </p>
-
-              <p class="chapter__content--desktop chapter__content--p">
-                In Venice was the Aldine Press of the well-known printer <strong class="chapter__content--strong name__strong accent">Aldus Manutius</strong>
-                situated.
-                He was a humanist. His greatest ambition was to save the written heritage of ancient
-                Greece from destruction by publishing it in print. Manutius is seen as the father
-                of contemporary publishing.
-              </p>
-
+              <?php echo $chapter1_intro ?>
               <p class="chapter__content--mobile chapter__content--p text__right">
-                In Venice was the Aldine Press <br> of the well-known printer <br>
-                <strong class="chapter__content--strong name__strong accent">Aldus Manutius</strong> <br> situated.
+                <?php echo $chapter1__intro2;?>
               </p>
             </div>
             <div class="chapter__content--desktop name-tags">
               <div class="chapter1__name">
-                <div class="chapter1__name--text">Aldus Manutius</div>
+                <div class="chapter1__name--text"><?php echo $chapter1_name1; ?></div>
               </div>
               <div class="chapter1__name">
-                <div class="chapter1__name--text">Aldus Manutius</div>
+                <div class="chapter1__name--text"><?php echo $chapter1_name1; ?></div>
               </div>
               <div class="chapter1__name">
-                <div class="chapter1__name--text">Francesco Griffo</div>
+                <div class="chapter1__name--text"><?php echo $chapter1_name2; ?></div>
               </div>
               <div class="chapter1__name">
-                <div class="chapter1__name--text">Aldus Manutius</div>
+                <div class="chapter1__name--text"><?php echo $chapter1_name1; ?></div>
               </div>
               <div class="chapter1__name">
-                <div class="chapter1__name--text">Francesco Griffo</div>
+                <div class="chapter1__name--text"><?php echo $chapter1_name2; ?></div>
               </div>
             </div>
 
             <div class="chapter1__content--aetna">
-              <div class="chapter1__content--date accent">1496</div>
+              <div class="chapter1__content--date accent"><?php echo $chapter1_year ?></div>
               <p class="chapter__content--p aetna__text">
-                Manutius wanted to publish the book <span class="bembo italic">“The aetna”</span> written by the humanist
-                Pietro Bembo. He wanted a new font for this, so had this font made by
-                one of the greatest punchcutters in history, <strong class="chapter__content--strong name__strong accent">Francesco Griffo</strong>.
+                <?php echo $chapter1_aetna;?>
               </p>
             </div>
 
             <div class="chapter1__content--punchcutter chapter__content--desktop">
                 <p class="chapter__content--p punchcutter__text">
-                  Being a punchcutter meant that Griffo spent his days punching out the shape of a
-                  typeface into steel. Griffo managed to create the most beautiful movable type based
-                  on the ancient handwritten manuscripts of classical antiquity.
+                  <?php echo $chapter1_punchcutter;?>
                 </p>
                 <svg class="punchcutter__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1266" height="1138" viewBox="0 0 1266.96 1137.531">
                   <defs>
@@ -164,35 +145,30 @@
 
 
             <p class="chapter__content--p chapter1__content--hypner">
-              <strong class="chapter__content--strong accent"> Hypnerotomachia Poliphili </strong> is the book that brought
-                Bembo to its greatest splendour.
-              In this publication, Griffo improved the letters' width/height ratio to bring it closer
-              to the calligraphic characteristics of the masters working at that time.
+              <?php echo $chapter1_hypnero;?>
             </p>
 
             <div class="chapter1__end">
                 <p class="chapter__content--mobile chapter__content--p chapter1__content--end">
-                  Griffo had no idea<br>how important his font would be in
-                  <br>the history of <br>type design. <br>Bembo was<br>born <br>.
+                  <?php echo $chapter1_end2; ?>
                 </p>
                 <p class="chapter__content--desktop chapter__content--p chapter1__content--end">
-                  Griffo had no idea at the time how <br> important his font would be in <br> the history
-                  of type design. <br> Bembo was <br> born <br> .
+                  <?php echo $chapter1_end1; ?>
                 </p>
               </div>
             </div>
       </section>
       <section class="chapter chapter2">
-        <h2 class="hidden">Chapter 2: Big in Beauty</h2>
+        <h2 class="hidden"><?php echo $chapter2_chapter . ':' . $chapter2_title?></h2>
         <div class="chapter__title">
             <div class="chapter__title--initial">
               <img src="assets/img/svg/initial-b.svg" alt="initial">
             </div>
-            <div class="chapter__title--text">Big in <span>Beauty</span></div>
+            <div class="chapter__title--text"><?php echo $chapter2_title; ?></div>
             <svg class="chapter__title--rect" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
               <rect id="Rectangle_166" width="298" height="298" fill="#1dff00"/>
             </svg>
-            <div class="chapter__title--chapter">Chapter 2</div>
+            <div class="chapter__title--chapter"><?php echo $chapter2_chapter; ?></div>
         </div>
 
           <div id="chapter2" class="chapter__content  chapter2__content">
@@ -233,30 +209,28 @@
                 <?php if(isset($_GET['part']) && $_GET['part'] == 1): ?>
                   <div class="chapter2__content--1 chapter2__content--part">
                     <div class="chapter2__content1--img">
-                      <div class="img__text bembo">Old style</div>
+                      <div class="img__text bembo"><?php echo $chapter2_old; ?></div>
                     </div>
                     <div class="chapter2__content1--text chapter2__text--axis  chapter2__content--mobile ">
-                      An axis drawn through the thinnest part of the round letters will lean to the left.
+                      <?php echo $chapter2_axis2; ?>
                     </div>
                     <div class="chapter2__content1--text chapter2__text--axis chapter2__content--desktop ">
-                      An axis drawn through the <br> thinnest part of the round letters <br> will lean to the left.
+                      <?php echo $chapter2_axis1; ?>
                     </div>
                     <p class="chapter2__content1--text chapter2__text--main chapter2__content--mobile">
-                      The main feature that distinguished the Griffo typeface from earlier typefaces
-                      is the way the lower case stems protrude above the capital letter.
+                      <?php echo $chapter2_main2; ?>
                     </p>
                     <p class="chapter2__content1--text chapter2__text--main chapter2__content--desktop">
-                      The main feature that distinguished <br> the Griffo typeface from earlier typefaces <br>
-                      is the way the lower case stems protrude <br> above the capital letter.
+                      <?php echo $chapter2_main1; ?>
                     </p>
                     <p class="chapter2__content1--text chapter2__text--thick chapter2__content--desktop">
-                      Little difference in <br> thick and thin parts
+                      <?php echo $chapter2_thick; ?>
                     </p>
                     <p class="chapter2__content1--text chapter2__text--serif chapter2__content--desktop ">
-                      Short rounded <br> serifs
+                      <?php echo $chapter2_serif1; ?>
                     </p>
                     <p class="chapter2__content1--text chapter2__text--serif chapter2__content--mobile">
-                      Short rounded serifs and a little difference in thick and thin parts
+                      <?php echo $chapter2_serif2; ?>
                     </p>
 
                   </div>
@@ -264,57 +238,45 @@
                 <?php elseif(isset($_GET['part']) && $_GET['part'] == 2): ?>
                   <div class="chapter2__content--2 chapter2__content--part">
                     <p class="chapter2__content2--text chapter2__content--mobile">
-                      Griffo was inspired by the handwritten manuscripts <br> of Classical antiquity.
-                      The reason the letters have a tilted axis and letters contain lowercase serifs
-                      is all because text used to be written with a <strong class="accent chapter__content--strong">flat pen</strong>. The pen can make thin and thick lines,
-                      but will never make very thin lines. <strong class="bembo italic">You can literally see the history in the letters.</strong>
+                      <?php echo $chapter2_pen2;?>
                     </p>
                     <p class="chapter2__content2--text chapter2__content--desktop">
-                      Griffo was inspired <br> by the handwritten manuscripts <br> of Classical antiquity.
-                      The reason the <br> letters have a tilted axis and letters <br> contain lowercase serifs
-                      is all because <br> text used to be written with a <strong class="accent chapter__content--strong">flat pen</strong>. <br> The pen can make thin and thick lines,<br>
-                      but will never make very thin lines. <strong class="bembo italic"><br> You can literally see the history <br> in the letters.</strong>
+                      <?php echo $chapter2_pen1;?>
                     </p>
                   </div>
 
                 <?php elseif( isset($_GET['part']) && $_GET['part'] == 3): ?>
                   <div class="chapter2__content--3 chapter2__content--part">
                     <p class="chapter2__content3--text">
-                      When the letters are enlarged as much as they are here,
-                      we start to see all kinds of <strong class="chapter__content--strong">oddities and eccentricities</strong>
-                      that are invisible at normal sizes
+                      <?php echo $chapter2_oddities1; ?>
                     </p>
                     <div class="chapter2__content3--letters">
                       <div class="chapter2__content3--r chapter2__content3--letter">
                         <div class="img__mask">
                           <img class="img__letter" src="assets/img/svg/letter-r.svg" alt="letter r">
                         </div>
-                        <p>The branch of <br> the <strong class="bembo">r</strong> quivers a bit</p>
+                        <?php echo $chapter2_r; ?>
                       </div>
                       <div class="chapter2__content3--e chapter2__content3--letter">
                         <div class="img__mask">
                         <img class="img__letter" src="assets/img/svg/letter-e.svg" alt="letter e">
                         </div>
-                        <p><strong class="bembo">e</strong> has a slight ear <br> on top of the eye</p>
+                        <?php echo $chapter2_e; ?>
                       </div>
                     </div>
                     <p class="chapter2__content3--text">
-                      This is because a perfect uniform lettertype would be difficult to
-                      read for long. It would look pretty sterile, even borgin, set in the massive
-                      blocks of text that make up books. It’s because of its eccentrices that Bebmo
-                      looks so beautiful on the page. The variations in the individual letters provide color,
-                      rhythm and the flow that this font is known for.
+                      <?php echo $chapter2_oddities2; ?>
                     </p>
                   </div>
 
                 <?php else: ?>
                   <div class="chapter2__content--0 chapter2__content--part">
                     <div class="chapter__title-s chapter2__title-s">
-                      <div class="chapter__title--text-s">Big in <span class="bembo">Beauty</span></div>
+                      <div class="chapter__title--text-s"><?php echo $chapter2_title; ?></div>
                         <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
                           <rect id="Rectangle_166" width="298" height="298" fill="#000"/>
                         </svg>
-                      <div class="chapter__title--chapter-s">Chapter 2</div>
+                      <div class="chapter__title--chapter-s"><?php echo $chapter2_chapter; ?></div>
                     </div>
                     <div>
                     <svg class="chapter__content--desktop chapter2__content0--svg" xmlns="http://www.w3.org/2000/svg" width="75" height="183" viewBox="0 0 75 183">
@@ -332,8 +294,8 @@
                         </g>
                       </g>
                     </svg>
-                    <p class="chapter__content--desktop chapter2__content0">Click the dots to <br> discover the Beauty</p>
-                    <p class="chapter__content--mobile chapter2__content0">Press the dots to <br> discover the Beauty</p>
+                    <p class="chapter__content--desktop chapter2__content0"><?php echo $chapter2_cta1 ?></p>
+                    <p class="chapter__content--mobile chapter2__content0"><?php echo $chapter2_cta2 ?></p>
                     </div>
                   </div>
                 <?php endif; ?>
