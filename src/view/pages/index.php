@@ -1,27 +1,5 @@
 <section class="content">
-
-  <div class="menu">
-    <h1 class="pagetitle hidden">Bembo Big Time</h1>
-      <nav>
-        <h2>Contents</h2>
-        <ul>
-          <li>Prologue</li>
-          <li>
-            chapter1
-            <div>Big in History</div>
-          </li>
-          <li>
-            chapter2
-            <div>Big in Beauty</div>
-          </li>
-          <li>
-            chapter3
-            <div>Big in Time</div>
-          </li>
-          <li>Next week</li>
-        </ul>
-      </nav>
-</div>
+  <h1 class="pagetitle hidden">Bembo Big Time</h1>
   <!-- <div class="header__transition"> -->
     <header class="header zoom">
       <div class="header__title">

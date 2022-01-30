@@ -31,23 +31,79 @@ li {
   font-size: var(--fontBig);
 }
 
-.menu {
-  background-color: var(--colorGrey);
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
+.menu__check {
+  opacity: 0;
 }
 
-.menu__link {
-  color: var(--colorBlack);
+.menu__check--label {
+  z-index: 2000;
+  position: fixed;
+  right: 1rem;
+  top: -3rem;
+  height: 100px;
+  transition: top 1s linear;
+}
+
+.menu__wrapper {
+  border: solid black .5rem;
+  background-color: var(--colorBlack);
+  width: 100%;
+  position: fixed;
+  top: -1rem;
+  height: 0;
+  transition: height 1s linear;
+  overflow: scroll;
+}
+
+.menu__check:checked + .menu__check--label {
+  top: calc(100vh - 100px);
+}
+
+.menu__check:checked ~ .menu__wrapper {
+  background-color: var(--colorBlack);
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 25px);
+  color: white;
+  z-index: 1000;
+}
+
+.menu__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+
+}
+
+.menu__navigation {
+  padding: 2rem;
+}
+
+.navigation__list {
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation__list--item {
+  font-size: 1.5rem;
+}
+
+.navigation__list--link {
+  color: var(--colorWhite);
   text-decoration: none;
-  text-align: right;
-  padding: var(--spacerRegular);
 }
 
 .bembo {
   font-family: var(--fontPrimary);
   font-weight: var(--fontWeightRegular);
+}
+
+.navigation__link--sub {
+  font-family: var(--fontSecundary);
+  font-size: 1rem;
+  margin-top: -1rem;
 }
 
 .italic {
