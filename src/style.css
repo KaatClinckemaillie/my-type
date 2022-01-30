@@ -587,8 +587,7 @@ li {
 
 .chapter2__content--b {
   width: 15rem;
-  height: max-content;
-  margin: auto;
+  height: 16rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   z-index: 1;
@@ -648,6 +647,11 @@ li {
 
 .chapter3__content--p {
   font-size: 1.3rem;
+}
+
+.chapter2__content0 {
+  text-align: center;
+  margin-top: 5rem;
 }
 
 .slot {
@@ -1104,6 +1108,23 @@ li {
     margin: auto;
   }
 
+  .chapter2__title-s {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .chapter2__content0--svg {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50px;
+    height: 122px;
+  }
+
+  .chapter2__content0 {
+    margin-top: 2rem;
+  }
+
   .chapter2__content--part {
     width: 60vw;
   }
@@ -1369,6 +1390,13 @@ li {
 
   .chapter2__content--b {
     margin-right: 0;
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .chapter2__content0--svg {
+    width: 75px;
+    height: 183px;
   }
 
   .chapter2__content--1 {
@@ -1451,6 +1479,14 @@ li {
 
   .chapter2__content3--letters {
     width: 25rem;
+  }
+
+  .chapter2__content0 {
+    font-size: 20px;
+  }
+
+  .chapter2__title-s {
+    margin: 0;
   }
 
   .chapter2__content3--letter > img {
@@ -1661,6 +1697,7 @@ li {
 
   .chapter2__content--b {
     width: 30vw;
+    height: 31vw;
   }
 
   .interaction__link--svg {
@@ -1682,6 +1719,10 @@ li {
     margin-left: 92%;
   }
 
+  .chapter2__title-s {
+    margin: 0;
+  }
+  
   .img__text {
     font-size: 14rem;
     background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-1.svg), url(assets/img/svg/color-2.svg), url(assets/img/svg/color-3.svg);

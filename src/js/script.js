@@ -112,7 +112,6 @@ const initScrollTrigger = () => {
   tlHeader.to($headerInitial, {
     duration: 10,
     transformOrigin: '44% 50%',
-    pin: true,
     scale: scale,
     ease: 'sine.out',
   }) .to ($focusInitial, {
@@ -150,31 +149,32 @@ const initScrollTrigger = () => {
       display: 'none'
     });
 
-  gsap.set('.chapter__title--text', {x: - 400});
-  gsap.set('.chapter__title--rect', {opacity: 0});
-  gsap.set('.chapter__title--chapter', {x: 200});
-  const tlTitle = gsap.timeline();
-  tlTitle.to('.chapter__title--text', {x: 0, duration: 3}, 0)
-    .to('.chapter__title--chapter', {x: 0, duration: 3}, 0)
-    .to('.chapter__title--rect', {opacity: 1, duration: 2});
+  if (window.innerWidth >= 768) {
+    gsap.set('.chapter__title--text', {x: - 400});
+    gsap.set('.chapter__title--rect', {opacity: 0});
+    gsap.set('.chapter__title--chapter', {x: 200});
+    const tlTitle = gsap.timeline();
+    tlTitle.to('.chapter__title--text', {x: 0, duration: 3}, 0)
+      .to('.chapter__title--chapter', {x: 0, duration: 3}, 0)
+      .to('.chapter__title--rect', {opacity: 1, duration: 2});
 
-  ScrollTrigger.create({
-    animation: tlTitle,
-    trigger: '.chapter__title',
-    start: 'top top',
-    scrub: 1,
-    pin: '.chapter__title',
-  });
-
-  gsap.to('.punchcutter__white--fill', {
-    scrollTrigger: {
-      trigger: '.chapter1__content--aetna',
+    ScrollTrigger.create({
+      animation: tlTitle,
+      trigger: '.chapter__title',
       start: 'top top',
-      markers: true
-    },
-    height: 1500,
-    duration: 10});
+      scrub: 1,
+      pin: '.chapter__title',
+    });
 
+    gsap.to('.punchcutter__white--fill', {
+      scrollTrigger: {
+        trigger: '.chapter1__content--aetna',
+        start: 'top top',
+        markers: true
+      },
+      height: 1500,
+      duration: 6});
+  }
 };
 
 export const init = () => {
@@ -183,7 +183,7 @@ export const init = () => {
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
 
-  initScrollTrigger();
+  //initScrollTrigger();
 
 
 
