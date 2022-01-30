@@ -1,10 +1,9 @@
 <section class="content">
 
-  <header class="menu hidden">
+  <div class="menu">
     <h1 class="pagetitle hidden">Bembo Big Time</h1>
-    <div>
-      <h2>Contents</h2>
       <nav>
+        <h2>Contents</h2>
         <ul>
           <li>Prologue</li>
           <li>
@@ -22,10 +21,9 @@
           <li>Next week</li>
         </ul>
       </nav>
-    </div>
-  </header>
+</div>
   <!-- <div class="header__transition"> -->
-    <div class="header zoom">
+    <header class="header zoom">
       <div class="header__title">
         <svg class="header__title--initial" xmlns="http://www.w3.org/2000/svg" width="260" height="280" viewBox="0 0 335.5 357.172">
           <g id="initial" transform="translate(0 -59.702)">
@@ -77,7 +75,7 @@
         <div class="header__bg--whitespace"></div>
       </div>
 
-    </div>
+    </header>
     <section class="prologue">
       <h2 class="hidden">Prologue</h2>
       <div class="prologue__paintings">

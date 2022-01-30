@@ -654,14 +654,14 @@ li {
   text-align: center;
 }
 
-footer {
+.footer {
   color: var(--colorWhite);
   font-size: .8rem;
   background-color: var(--colorBlack);
   padding-bottom: 1rem;
 }
 
-footer > p {
+.footer__text {
   margin-left: 1rem;
 }
 
