@@ -1153,6 +1153,7 @@ li {
   .chapter1__content--end {
     font-size: calc(40px + (120 - 40) * ((100vw - 768px) / (2560 - 768)));
     text-align: center;
+    margin: 0;
   }
 
   .name-tags {
@@ -1195,6 +1196,15 @@ li {
   .chapter3__content--p {
     font-size: 24px;
     width: 30rem;
+  }
+
+  .chapter1__end {
+    width: 100%;
+    background-color: var(--colorGrey);
+    background-image: url(assets/img/svg/background-1to2.svg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
 
   .hidden {
@@ -1279,7 +1289,7 @@ li {
     margin-top: calc(2rem + (4 - 2) * ((100vw - 64rem) / (120 - 64)));
   }
 
-  .chapter1__content--end {
+  .chapter1__end {
     grid-area: slot;
     margin-top: 8rem;
   }
