@@ -286,11 +286,15 @@
                     </p>
                     <div class="chapter2__content3--letters">
                       <div class="chapter2__content3--r chapter2__content3--letter">
-                        <img src="assets/img/svg/letter-r.svg" alt="letter r">
+                        <div class="img__mask">
+                          <img class="img__letter" src="assets/img/svg/letter-r.svg" alt="letter r">
+                        </div>
                         <p>The branch of <br> the <strong class="bembo">r</strong> quivers a bit</p>
                       </div>
                       <div class="chapter2__content3--e chapter2__content3--letter">
-                        <img src="assets/img/svg/letter-e.svg" alt="letter e">
+                        <div class="img__mask">
+                        <img class="img__letter" src="assets/img/svg/letter-e.svg" alt="letter e">
+                        </div>
                         <p><strong class="bembo">e</strong> has a slight ear <br> on top of the eye</p>
                       </div>
                     </div>

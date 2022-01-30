@@ -561,7 +561,7 @@ li {
   margin-top: 3rem;
 }
 
-.chapter2__content3--letter > img {
+.img__letter {
   width: 50vw;
   margin-bottom: 1rem;
 }
@@ -1161,7 +1161,7 @@ li {
     line-height: 1.5rem;
   }
 
-  .chapter2__content3--letter > img {
+  .img__letter {
     width: 10vw;
   }
 
@@ -1478,6 +1478,8 @@ li {
   }
 
   .chapter2__content3--letters {
+    justify-content: center;
+    margin: auto;
     width: 25rem;
   }
 
@@ -1489,8 +1491,19 @@ li {
     margin: 0;
   }
 
-  .chapter2__content3--letter > img {
+  .img__mask {
+    width: 20rem;
+    height: 12rem;
+    overflow-x: hidden;
+  }
+
+  .img__letter {
     width: 9rem;
+    transition: transform .5s ease-out;
+  }
+
+  .img__letter:hover {
+    transform: scale(2) translate(0, 3rem);
   }
 
   .chapter3__content {
@@ -1722,7 +1735,7 @@ li {
   .chapter2__title-s {
     margin: 0;
   }
-  
+
   .img__text {
     font-size: 14rem;
     background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-1.svg), url(assets/img/svg/color-2.svg), url(assets/img/svg/color-3.svg);

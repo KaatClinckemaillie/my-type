@@ -1,6 +1,7 @@
 import {random} from './functions/lib.js';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 
 //header
