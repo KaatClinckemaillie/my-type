@@ -304,28 +304,20 @@
       </section>
 
       <section class="chapter chapter3" id="chapter3">
-          <h2 class="hidden">Chapter 3: Big in Time</h2>
+          <h2 class="hidden"><?php echo $chapter3_chapter . ':' . $chapter3_title?></h2>
           <div class="chapter__title <?php if(isset($_GET['part']) && $_GET['part'] == 3) { echo 'chapter3__title';} ?>">
               <div class="chapter__title--initial">
                 <img src="assets/img/svg/initial-t.svg" alt="initial">
               </div>
-              <div class="chapter__title--text">Big in <span>Time</span></div>
+              <div class="chapter__title--text"><?php echo $chapter3_title; ?></div>
               <svg class="chapter__title--rect chapter3__title--rect" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
                 <rect id="Rectangle_166" width="298" height="298" fill="#1dff00"/>
               </svg>
-              <div class="chapter__title--chapter">Chapter 3</div>
+              <div class="chapter__title--chapter"><?php echo $chapter3_chapter; ?></div>
           </div>
           <div class="chapter__content  chapter3__content">
             <div class="chapter3__content--text">
-              <p class="chapter__content--p chapter3__content--p">
-                Griffo made a font that is <strong class="chapter__content--strong">big in Time</strong>. Bembo served as a source of inspiration for many other designers.
-                In 1929 Stanley Morison redesigned Bembo for Monotype, and from then on <strong class="chapter__content--strong"> a new era of splendor began </strong> for this typeface.
-                Even the well-known German type designer Jan Tschichold was inspired by the books made by Manutius and Griffo more than 400 years ago.
-              </p>
-              <p class="chapter__content--p chapter3__content--p">
-                In the course of the 20th century until now, Bembo has become a font associated with <strong class="chapter__content--strong">culture and elegance </strong>. Everywhere you
-                come across Bembo and followers of the Bembo font. That Bembo is Big Time has now been proven.
-              </p>
+              <?php echo $chapter3_text;?>
             </div>
           </div>
 
@@ -333,34 +325,34 @@
     </div>
     <section class="slot" id="end">
       <div class="slot__title">
-        <h2 class="slot__title--big">Next week</h2>
-        <p class="slot__title--small">To be continued...</p>
+        <h2 class="slot__title--big"><?php echo $slot_title; ?></h2>
+        <p class="slot__title--small"><?php echo $slot_subtitle; ?></p>
       </div>
         <div class="slot__content">
           <div class="slot__font">
-            <div class="slot__font--thisWeek bembo">Slanted</div>
-            <div class="slot__font--nextWeek">Next week: <strong class="futura accent">Futura</strong></div>
+            <div class="slot__font--thisWeek bembo"><?php echo $slot_slanted; ?></div>
+            <div class="slot__font--nextWeek"><?php echo $slot_next; ?></div>
           </div>
 
           <div class="fonts">
             <ol>
-              <li class="font">1. Clarendon</li>
-              <li class="font green">2. Bembo</li>
-              <li class="font grey">3. Futura <span class="font__date">(from 7 February)</span></li>
-              <li class="font grey">4. Caslon <span class="font__date">(from 14 February)</span></li>
-              <li class="font grey">5. Bodoni <span class="font__date">(from 21 February)</span></li>
+              <li class="font"><?php echo $slot_font1; ?></li>
+              <li class="font green"><?php echo $slot_font2; ?></li>
+              <li class="font grey"><?php echo $slot_font3; ?></li>
+              <li class="font grey"><?php echo $slot_font4; ?></li>
+              <li class="font grey"><?php echo $slot_font5; ?></li>
             </ol>
           </div>
 
           <div class="slot__link">
             <a class="slot__link--button" href="https://www.slanted.de/">
-              www.slanted.de
+              <?php echo $slot_link; ?>
             </a>
             <a class="slot__link--button" href="">
-              Discover Clarendon
+              <?php echo $slot_discover; ?>
             </a>
             <a class="slot__link--button" href="https://www.slanted.de/">
-              www.slanted.de
+              <?php echo $slot_link; ?>
             </a>
           </div>
         </div>
