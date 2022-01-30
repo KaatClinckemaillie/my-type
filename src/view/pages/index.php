@@ -156,15 +156,15 @@
                 In this publication, Griffo improved the letters' width/height ratio to bring it closer
                 to the calligraphic characteristics of the masters working at that time.
               </p>
-          <p class="chapter__content--mobile chapter__content--p chapter1__content--end">
-            Griffo had no idea<br>how important his font would be in
-            <br>the history of <br>type design. <br>Bembo was<br>born <br>.
-          </p>
-          <p class="chapter__content--desktop chapter__content--p chapter1__content--end">
-            Griffo had no idea at the time how <br> important his font would be in <br> the history
-            of type design. <br> Bembo was <br> born <br> .
-          </p>
-      </div>
+              <p class="chapter__content--mobile chapter__content--p chapter1__content--end">
+                Griffo had no idea<br>how important his font would be in
+                <br>the history of <br>type design. <br>Bembo was<br>born <br>.
+              </p>
+              <p class="chapter__content--desktop chapter__content--p chapter1__content--end">
+                Griffo had no idea at the time how <br> important his font would be in <br> the history
+                of type design. <br> Bembo was <br> born <br> .
+              </p>
+          </div>
     </section>
     <section class="chapter chapter2">
       <h2 class="hidden">Chapter 2: Big in Beauty</h2>
