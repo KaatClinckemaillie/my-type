@@ -256,9 +256,9 @@ const initScrollTrigger = () => {
     }
   });
 
-  tlSlanted.to('.slot__font--thisWeek', {duration: 1, scale: 0})
+  tlSlanted.to('.slot__font--thisWeek', {duration: 0.5, opacity: 0, ease: 'power3.easeOut'}, 2)
     .to('.slot__font--thisWeek', {fontFamily: 'futura-pt, sans-serif'})
-    .to('.slot__font--thisWeek', {duration: 0.5, scale: 1, ease: 'power3.easeOut'});
+    .to('.slot__font--thisWeek', {duration: 0.5, opacity: 1, ease: 'power3.easeOut'});
 
 };
 

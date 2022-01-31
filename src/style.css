@@ -1117,8 +1117,6 @@ li {
   }
 
   .chapter2__content0--svg {
-    display: flex;
-    justify-content: center;
     margin: auto;
     width: 50px;
     height: 122px;
