@@ -62,9 +62,9 @@
             srcset="assets/img/paintings/<?php echo $painting->name;?>-l.jpg <?php echo $painting->widthl;?>w,
                     assets/img/paintings/<?php echo $painting->name;?>-m.jpg <?php echo $painting->widthm;?>w,
                     assets/img/paintings/<?php echo $painting->name;?>-s.jpg <?php echo $painting->widths;?>w"
-            sizes="(min-width: 768px) <?php echo $painting->widthm?>px,
-                   (min-width: 1440px) <?php echo $painting->widthl?>px,
-                   <?php echo $painting->widths?>px"
+            sizes="(min-width: 3px) <?php echo $painting->widths?>px,
+                   (min-width: 768px) <?php echo $painting->widthm?>px,
+                   (min-width: 1440px) <?php echo $painting->widthl?>px,"
           >
         <?php endforeach; ?>
       </div>

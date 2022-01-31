@@ -186,9 +186,9 @@ const initScrollTrigger = () => {
         animation: tlTitle,
         trigger: $title,
         start: 'top top',
+        end: 'bottom 30%',
         scrub: 1,
         pin: true,
-        markers: true
       });
     });
 
@@ -250,7 +250,7 @@ const initScrollTrigger = () => {
   }
 };
 
-const initTransitions = () => {
+const initAnimation = () => {
 
   // animation mouse
   const tlMouse = gsap.timeline({repeat: 3});
@@ -258,6 +258,11 @@ const initTransitions = () => {
     .set('.mouse__dot', {fill: '#1dff00'}, 0.5)
     .set('.mouse__dot', {fill: 'none'}, 2)
     .to('.mouse', {y: 0, duration: 2});
+
+  ScrollTrigger.create({
+    animation: tlMouse,
+    trigger: '.chapter2__content',
+  });
 
 };
 
@@ -330,7 +335,7 @@ export const init = () => {
   navigationItems.forEach($item => {
     $item.addEventListener('click', closeNavigation);
   });
-  initTransitions();
+  initAnimation();
   initScrollTrigger();
   getLetters();
 
