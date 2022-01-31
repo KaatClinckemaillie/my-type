@@ -253,7 +253,6 @@ const initScrollTrigger = () => {
     scrollTrigger: {
       trigger: '.slot__font',
       start: 'top 50%',
-      markers: true
     }
   });
 
