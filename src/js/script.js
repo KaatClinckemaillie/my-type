@@ -248,6 +248,19 @@ const initScrollTrigger = () => {
       });
     });
   }
+
+  const tlSlanted = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.slot__font',
+      start: 'top 50%',
+      markers: true
+    }
+  });
+
+  tlSlanted.to('.slot__font--thisWeek', {duration: 1, scale: 0})
+    .to('.slot__font--thisWeek', {fontFamily: 'futura-pt, sans-serif'})
+    .to('.slot__font--thisWeek', {duration: 0.5, scale: 1, ease: 'power3.easeOut'});
+
 };
 
 const initAnimation = () => {
@@ -256,8 +269,8 @@ const initAnimation = () => {
   const tlMouse = gsap.timeline({repeat: 3});
   tlMouse.to('.mouse', {y: - 40, duration: 1})
     .set('.mouse__dot', {fill: '#1dff00'}, 0.5)
-    .set('.mouse__dot', {fill: 'none'}, 2)
-    .to('.mouse', {y: 0, duration: 2});
+    .set('.mouse__dot', {fill: 'none'}, 1)
+    .to('.mouse', {y: 0, duration: 1}, 1);
 
   ScrollTrigger.create({
     animation: tlMouse,
