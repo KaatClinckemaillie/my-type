@@ -207,8 +207,8 @@
                   </a>
                 </div>
 
-                <?php if(isset($_GET['part']) && $_GET['part'] == 1): ?>
-                  <div class="chapter2__content--1 chapter2__content--part">
+                <?php //if(isset($_GET['part']) && $_GET['part'] == 1): ?>
+                  <div class="chapter2__content--1 chapter2__content--part <?php if(!(isset($_GET['part']) && $_GET['part'] == 1)){ echo 'hidden';} ?>">
                     <div class="chapter2__content1--img">
                       <div class="img__text bembo"><?php echo $chapter2_old; ?></div>
                     </div>
@@ -236,8 +236,8 @@
 
                   </div>
 
-                <?php elseif(isset($_GET['part']) && $_GET['part'] == 2): ?>
-                  <div class="chapter2__content--2 chapter2__content--part">
+
+                  <div class="chapter2__content--2 chapter2__content--part <?php if(!(isset($_GET['part']) && $_GET['part'] == 2)){ echo 'hidden';} ?>">
                     <p class="chapter2__content2--text chapter2__content--mobile">
                       <?php echo $chapter2_pen2;?>
                     </p>
@@ -246,8 +246,8 @@
                     </p>
                   </div>
 
-                <?php elseif( isset($_GET['part']) && $_GET['part'] == 3): ?>
-                  <div class="chapter2__content--3 chapter2__content--part">
+
+                  <div class="chapter2__content--3 chapter2__content--part <?php if(!(isset($_GET['part']) && $_GET['part'] == 3)){ echo 'hidden';} ?>">
                     <p class="chapter2__content3--text">
                       <?php echo $chapter2_oddities1; ?>
                     </p>
@@ -270,8 +270,8 @@
                     </p>
                   </div>
 
-                <?php else: ?>
-                  <div class="chapter2__content--0 chapter2__content--part">
+
+                  <div class="chapter2__content--0 chapter2__content--part <?php if( isset($_GET['part']) && ($_GET['part']== 1 || $_GET['part']== 2 || $_GET['part']== 3)){ echo 'hidden';} ?>">
                     <div class="chapter__title-s chapter2__title-s">
                       <div class="chapter__title--text-s"><?php echo $chapter2_title; ?></div>
                         <svg class="chapter__title--rect-s" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
@@ -299,7 +299,7 @@
                     <p class="chapter__content--mobile chapter2__content0"><?php echo $chapter2_cta2 ?></p>
                     </div>
                   </div>
-                <?php endif; ?>
+                
           </div>
         </div>
       </section>
