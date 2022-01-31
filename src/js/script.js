@@ -205,7 +205,6 @@ const initScrollTrigger = () => {
         trigger: '.chapter1__content--punchcutter',
         start: 'top 30%',
         end: 'bottom 50%',
-        markers: true,
         scrub: 1
       },
     }),
@@ -218,7 +217,6 @@ const initScrollTrigger = () => {
         start: '50% 50%',
         end: '80% bottom',
         scrub: 1,
-        markers: true
       },
     });
 
@@ -230,12 +228,11 @@ const initScrollTrigger = () => {
         start: 'top 80%',
         end: '20% bottom',
         scrub: 1,
-        markers: true
       }
     });
 
     // scroll trigers for mobile
-  } else {
+  } else if (window.innerWidth < 768) {
     document.querySelectorAll('.chapter__title').forEach($title => {
       const $text = $title.querySelector('.chapter__title--text');
       const $chapter = $title.querySelector('.chapter__title--chapter');
@@ -251,7 +248,6 @@ const initScrollTrigger = () => {
         start: 'top 50%',
         end: 'bottom 80%',
         scrub: 1,
-        markers: true
       });
     });
   }
