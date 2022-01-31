@@ -34,6 +34,8 @@ const $chapter2Part0 = document.querySelector('.chapter2__content--0');
 const $chapter2Background = document.querySelector('.chapter2__background');
 const $chapterCheck = document.querySelector('.chapter__title--check');
 
+const navigationItems = document.querySelectorAll('.navigation__list--item');
+
 const rect = $focusInitial.getBoundingClientRect();
 
 let scale;
@@ -112,7 +114,7 @@ const initScrollTrigger = () => {
   gsap.set('.prologue__paintings', {opacity: 0, scale: 0});
   gsap.set($prologue, {y: y});
 
-  gsap.set('.chapter3__content--text', {y: 200});
+
   gsap.set('.name-tags', {xPercent: 100});
 
   // scroll header
@@ -168,7 +170,9 @@ const initScrollTrigger = () => {
       display: 'none'
     });
 
+  // scroll triggers for desktop
   if (window.innerWidth >= 768) {
+    gsap.set('.chapter3__content--text', {y: 200});
     document.querySelectorAll('.chapter__title').forEach($title => {
       const $text = $title.querySelector('.chapter__title--text');
       const $chapter = $title.querySelector('.chapter__title--chapter');
@@ -230,6 +234,26 @@ const initScrollTrigger = () => {
       }
     });
 
+    // scroll trigers for mobile
+  } else {
+    document.querySelectorAll('.chapter__title').forEach($title => {
+      const $text = $title.querySelector('.chapter__title--text');
+      const $chapter = $title.querySelector('.chapter__title--chapter');
+      gsap.set($text, {x: - 400});
+      gsap.set($chapter, {x: 200});
+      const tlTitle = gsap.timeline();
+      tlTitle.to($text, {x: 0, duration: 3}, 0)
+        .to($chapter, {x: 0, duration: 3}, 0);
+
+      ScrollTrigger.create({
+        animation: tlTitle,
+        trigger: $title,
+        start: 'top 50%',
+        end: 'bottom 80%',
+        scrub: 1,
+        markers: true
+      });
+    });
   }
 };
 
@@ -295,16 +319,27 @@ const showPart3 = e => {
   $chapterCheck.classList.add('chapter3__title');
 };
 
+const closeNavigation = () => {
+  document.querySelector('.menu__check').checked = false;
+};
+
+
 export const init = () => {
   console.log('start executing this JavaScript');
   resizeWindow();
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
+
   $buttomLink1.addEventListener('click', showPart1);
   $buttomLink2.addEventListener('click', showPart2);
   $buttomLink3.addEventListener('click', showPart3);
+
+  navigationItems.forEach($item => {
+    $item.addEventListener('click', closeNavigation)
+  });
   initTransitions();
   initScrollTrigger();
   getLetters();
+
 };
 
