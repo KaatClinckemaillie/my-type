@@ -83,9 +83,6 @@
             </svg>
             <div class="chapter__title--chapter"><?php echo $chapter1_chapter;?></div>
         </div>
-        <svg class="chapter1__title--line" xmlns="http://www.w3.org/2000/svg" width="1" height="300" viewBox="0 0 1 299.416">
-          <path id="Path_195" data-name="Path 195" d="M-4638,13797.584V14097" transform="translate(4638.5 -13797.584)" fill="none" stroke="#000" stroke-width="1"/>
-        </svg>
         <div class="chapter__content  chapter1__content" id="chapter1">
             <div class="chapter__title-s chapter1__title-s">
               <div class="chapter__title--text-s"><?php echo $chapter1_title; ?></div>

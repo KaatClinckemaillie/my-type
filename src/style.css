@@ -496,10 +496,10 @@ li {
 .img__text {
   width: max-content;
   margin-left: -1rem;
-  background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-2.svg);
+  background-image: url(assets/img/svg/dashed-lines.svg), url(assets/img/svg/color-1.svg), url(assets/img/svg/color-2.svg), url(assets/img/svg/color-3.svg);
   background-repeat: no-repeat, no-repeat;
-  background-size: contain, 235px;
-  background-position: top, 88px top;
+  background-size: contain, 60px, 235px, 130px;
+  background-position: top, 10px -50px, 88px top, 85px 25px;
 }
 
 .chapter2__content1--text {
