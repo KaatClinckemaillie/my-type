@@ -1496,7 +1496,7 @@ li {
   .img__mask {
     width: 20rem;
     height: 12rem;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .img__letter {

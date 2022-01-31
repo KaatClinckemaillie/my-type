@@ -311,7 +311,7 @@
               <svg class="chapter__title--rect chapter3__title--rect" xmlns="http://www.w3.org/2000/svg" width="298" height="298" viewBox="0 0 298 298">
                 <rect id="Rectangle_166" width="298" height="298" fill="#1dff00"/>
               </svg>
-              <div class="chapter__title--chapter"><?php echo $chapter3_chapter; ?></div>
+              <div class="chapter__title--chapter "><?php echo $chapter3_chapter; ?></div>
           </div>
           <div class="chapter__content  chapter3__content">
             <div class="chapter3__content--text">
