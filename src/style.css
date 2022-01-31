@@ -584,7 +584,7 @@ li {
 .chapter2__interaction {
   display: grid;
   place-content: center;
-  grid-template: max-content / max-content;
+  grid-template: 15rem / 16rem;
 
 }
 
@@ -614,12 +614,12 @@ li {
 }
 
 .interaction__link--2 {
-  margin-left: 85%;
+  margin-left: 80%;
 }
 
 .interaction__link--3 {
   margin-top: 70%;
-  margin-left: 90%;
+  margin-left: 85%;
 }
 
 .chapter2__background2 > .chapter2__wrapper > .chapter2__interaction > .chapter2__content--b > g > .outline {
@@ -1388,6 +1388,10 @@ li {
     background-position: top, 20px -50px, 135px top, 130px 30px;
   }
 
+  .chapter2__interaction {
+    grid-template: 25vw/ 25vw;
+  }
+
   .chapter2__content--b {
     margin-right: 0;
     width: 25vw;
@@ -1706,6 +1710,10 @@ li {
 
   .chapter2__wrapper {
     width: 80rem;
+  }
+
+  .chapter2__interaction {
+    grid-template: 30vw/ 31vw;
   }
 
   .chapter2__content--b {
