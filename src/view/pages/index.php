@@ -173,7 +173,7 @@
         </div>
 
           <div id="chapter2" class="chapter__content  chapter2__content">
-            <div class="<?php if(isset($_GET['part']) && $_GET['part'] == 2){ echo 'chapter2__background2';} if( isset($_GET['part']) && $_GET['part'] == 3){ echo 'chapter2__background3';} ?>">
+            <div class="chapter2__background <?php if(isset($_GET['part']) && $_GET['part'] == 2){ echo 'chapter2__background2';} if( isset($_GET['part']) && $_GET['part'] == 3){ echo 'chapter2__background3';} ?>">
               <div class="chapter2__wrapper">
                 <div class="chapter2__interaction">
                   <svg class="chapter2__content--b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="592" height="632" viewBox="0 0 584 633">
@@ -183,7 +183,7 @@
                   </svg>
                   <a class="interaction__link interaction__link--1" href="index.php?part=1#chapter2">
                     <svg class="interaction__link--svg"  width="67" height="67" viewBox="0 0 67 67">
-                      <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 1){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
+                      <g class="interaction__dot1" id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 1){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
                         <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
                         <circle cx="33.5" cy="33.5" r="32" fill="none"/>
                       </g>
@@ -191,7 +191,7 @@
                   </a>
                   <a class="interaction__link interaction__link--2" href="index.php?part=2#chapter2">
                     <svg class="interaction__link--svg" width="67" height="67" viewBox="0 0 67 67">
-                      <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 2){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
+                      <g class="interaction__dot2" id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 2){ echo '#1dff00';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
                         <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
                         <circle cx="33.5" cy="33.5" r="32" fill="none"/>
                       </g>
@@ -199,7 +199,7 @@
                   </a>
                   <a class="interaction__link interaction__link--3" href="index.php?part=3#chapter2">
                     <svg class="interaction__link--svg" xmlns="http://www.w3.org/2000/svg" width="67" height="67" viewBox="0 0 67 67">
-                      <g id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
+                      <g class="interaction__dot3" id="Ellipse_20" data-name="Ellipse 20" fill="<?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';}else{ echo 'none';} ?> " stroke=" <?php if(isset($_GET['part']) && $_GET['part'] == 3){ echo '#fff';} else { echo '#1dff00';}?>" stroke-width="3">
                         <circle cx="33.5" cy="33.5" r="33.5" stroke="none"/>
                         <circle cx="33.5" cy="33.5" r="32" fill="none"/>
                       </g>
@@ -299,14 +299,14 @@
                     <p class="chapter__content--mobile chapter2__content0"><?php echo $chapter2_cta2 ?></p>
                     </div>
                   </div>
-                
+
           </div>
         </div>
       </section>
 
       <section class="chapter chapter3" id="chapter3">
           <h2 class="hidden"><?php echo $chapter3_chapter . ':' . $chapter3_title?></h2>
-          <div class="chapter__title <?php if(isset($_GET['part']) && $_GET['part'] == 3) { echo 'chapter3__title';} ?>">
+          <div class="chapter__title chapter__title--check <?php if(isset($_GET['part']) && $_GET['part'] == 3) { echo 'chapter3__title';} ?>">
               <div class="chapter__title--initial">
                 <img src="assets/img/svg/initial-t.svg" alt="initial">
               </div>

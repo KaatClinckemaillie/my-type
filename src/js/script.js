@@ -20,6 +20,19 @@ const $chapters = document.querySelector('.chapters');
 
 const letters = [];
 
+const $buttomLink1 = document.querySelector('.interaction__link--1');
+const $buttomLink2 = document.querySelector('.interaction__link--2');
+const $buttomLink3 = document.querySelector('.interaction__link--3');
+const $dot1 = document.querySelector('.interaction__dot1');
+const $dot2 = document.querySelector('.interaction__dot2');
+const $dot3 = document.querySelector('.interaction__dot3');
+
+const $chapter2Part1 = document.querySelector('.chapter2__content--1');
+const $chapter2Part2 = document.querySelector('.chapter2__content--2');
+const $chapter2Part3 = document.querySelector('.chapter2__content--3');
+const $chapter2Part0 = document.querySelector('.chapter2__content--0');
+const $chapter2Background = document.querySelector('.chapter2__background');
+const $chapterCheck = document.querySelector('.chapter__title--check');
 
 const rect = $focusInitial.getBoundingClientRect();
 
@@ -198,11 +211,65 @@ const initTransitions = () => {
 
 };
 
+const showPart1 = e => {
+  e.preventDefault();
+  $chapter2Part1.classList.remove('hidden');
+  $chapter2Background.classList.remove('chapter2__background2');
+  $chapter2Background.classList.remove('chapter2__background3');
+  $chapter2Part2.classList.add('hidden');
+  $chapter2Part3.classList.add('hidden');
+  $chapter2Part0.classList.add('hidden');
+  $dot1.style.fill = '#1dff00';
+  $dot1.style.stroke = '#1dff00';
+  $dot2.style.fill = 'none';
+  $dot3.style.fill = 'none';
+  $dot2.style.stroke = '#1dff00';
+  $dot3.style.stroke = '#1dff00';
+  $chapterCheck.classList.remove('chapter3__title');
+};
+
+const showPart2 = e => {
+  e.preventDefault();
+  $chapter2Part2.classList.remove('hidden');
+  $chapter2Background.classList.add('chapter2__background2');
+  $chapter2Background.classList.remove('chapter2__background3');
+  $chapter2Part1.classList.add('hidden');
+  $chapter2Part3.classList.add('hidden');
+  $chapter2Part0.classList.add('hidden');
+  $dot1.style.fill = 'none';
+  $dot1.style.stroke = '#1dff00';
+  $dot2.style.fill = '#1dff00';
+  $dot2.style.stroke = '#1dff00';
+  $dot3.style.fill = 'none';
+  $dot3.style.stroke = '#1dff00';
+  $chapterCheck.classList.remove('chapter3__title');
+};
+
+const showPart3 = e => {
+  e.preventDefault();
+  $chapter2Part3.classList.remove('hidden');
+  $chapter2Background.classList.add('chapter2__background3');
+  $chapter2Background.classList.remove('chapter2__background2');
+  $chapter2Part1.classList.add('hidden');
+  $chapter2Part2.classList.add('hidden');
+  $chapter2Part0.classList.add('hidden');
+  $dot1.style.fill = 'none';
+  $dot1.style.stroke = '#fff';
+  $dot2.style.fill = '#none';
+  $dot2.style.stroke = '#fff';
+  $dot3.style.fill = '#fff';
+  $dot3.style.stroke = '#fff';
+  $chapterCheck.classList.add('chapter3__title');
+};
+
 export const init = () => {
   console.log('start executing this JavaScript');
   resizeWindow();
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
+  $buttomLink1.addEventListener('click', showPart1);
+  $buttomLink2.addEventListener('click', showPart2);
+  $buttomLink3.addEventListener('click', showPart3);
   initTransitions();
   initScrollTrigger();
   getLetters();
