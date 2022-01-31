@@ -112,6 +112,9 @@ const initScrollTrigger = () => {
   gsap.set('.prologue__paintings', {opacity: 0, scale: 0});
   gsap.set($prologue, {y: y});
 
+  gsap.set('.chapter3__content--text', {y: 200});
+  gsap.set('.name-tags', {xPercent: 100});
+
   // scroll header
   const tlHeader = gsap.timeline({
     scrollTrigger: {
@@ -166,35 +169,65 @@ const initScrollTrigger = () => {
     });
 
   if (window.innerWidth >= 768) {
-    gsap.set('.chapter__title--text', {x: - 400});
-    gsap.set('.chapter__title--rect', {opacity: 0});
-    gsap.set('.chapter__title--chapter', {x: 200});
-    const tlTitle = gsap.timeline();
-    tlTitle.to('.chapter__title--text', {x: 0, duration: 3}, 0)
-      .to('.chapter__title--chapter', {x: 0, duration: 3}, 0)
-      .to('.chapter__title--rect', {opacity: 1, duration: 2});
+    document.querySelectorAll('.chapter__title').forEach($title => {
+      const $text = $title.querySelector('.chapter__title--text');
+      const $chapter = $title.querySelector('.chapter__title--chapter');
+      const $rect = $title.querySelector('.chapter__title--rect');
+      gsap.set($text, {x: - 400});
+      gsap.set($rect, {opacity: 0});
+      gsap.set($chapter, {x: 200});
+      const tlTitle = gsap.timeline();
+      tlTitle.to($text, {x: 0, duration: 3}, 0)
+        .to($chapter, {x: 0, duration: 3}, 0)
+        .to($rect, {opacity: 1, duration: 2});
 
-    ScrollTrigger.create({
-      animation: tlTitle,
-      trigger: '.chapter__title',
-      start: 'top top',
-      scrub: 1,
-      pin: true,
-      markers: true
+      ScrollTrigger.create({
+        animation: tlTitle,
+        trigger: $title,
+        start: 'top top',
+        scrub: 1,
+        pin: true,
+        markers: true
+      });
     });
+
 
     // scroll h chapter 1
-    const tlH = gsap.timeline({
+
+    gsap.to('.punchcutter__white--fill', {
+      height: 1500,
+      ease: 'none',
       scrollTrigger: {
-        trigger: '.chapter1__content--aetna',
-        start: 'top top',
+        trigger: '.chapter1__content--punchcutter',
+        start: 'top 30%',
+        end: 'bottom 50%',
+        markers: true,
+        scrub: 1
+      },
+    }),
+
+    gsap.to('.chapter3__content--text', {
+      y: - 100,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.chapter3',
+        start: '50% 50%',
+        end: '80% bottom',
+        scrub: 1,
         markers: true
-      }
+      },
     });
 
-    tlH.to('.punchcutter__white--fill', {
-      height: 1500,
-      duration: 6
+    gsap.to('.name-tags', {
+      xPercent: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.chapter1__content',
+        start: 'top 80%',
+        end: '20% bottom',
+        scrub: 1,
+        markers: true
+      }
     });
 
   }
