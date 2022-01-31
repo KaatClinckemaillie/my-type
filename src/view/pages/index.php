@@ -97,7 +97,7 @@
             <div class="chapter1__content--aldus">
               <?php echo $chapter1_intro ?>
               <p class="chapter__content--mobile chapter__content--p text__right">
-                <?php echo $chapter1__intro2;?>
+                <?php echo $chapter1_intro2;?>
               </p>
             </div>
             <div class="chapter__content--desktop name-tags">
@@ -282,7 +282,7 @@
                     <div>
                     <svg class="chapter__content--desktop chapter2__content0--svg" xmlns="http://www.w3.org/2000/svg" width="75" height="183" viewBox="0 0 75 183">
                       <g  id="svg-mouse" transform="translate(-487 -6146)">
-                        <g id="dot" transform="translate(493 6146)" fill="none" stroke="#1dff00" stroke-width="1">
+                        <g class="mouse__dot" id="dot" transform="translate(493 6146)" fill="none" stroke="#1dff00" stroke-width="1">
                           <circle cx="33" cy="33" r="33" stroke="none"/>
                           <circle cx="33" cy="33" r="32.5" fill="none"/>
                         </g>

@@ -10,7 +10,6 @@ const $headerBg = document.querySelector('.header__bg');
 const $headerInitial = document.querySelector('.header__title--initial');
 const $focusInitial = document.querySelector('.initial__focus');
 
-
 const amountNeededCells = 67; // grid of 7 x 1", so 91 cells, 24 cells are already in use, so 67 cells are left;
 
 //prologue
@@ -99,6 +98,8 @@ const initScrollTrigger = () => {
   const y = - 3 / 4 * window.innerHeight;
   gsap.set('.prologue__paintings', {opacity: 0, scale: 0});
   gsap.set($prologue, {y: y});
+
+  // scroll header
   const tlHeader = gsap.timeline({
     scrollTrigger: {
       trigger: '.header',
@@ -126,6 +127,7 @@ const initScrollTrigger = () => {
   }, 0)
   ;
 
+  // scroll prologue
   const tlPrologue = gsap.timeline({
     scrollTrigger: {
       trigger: '.prologue',
@@ -164,18 +166,36 @@ const initScrollTrigger = () => {
       trigger: '.chapter__title',
       start: 'top top',
       scrub: 1,
-      pin: '.chapter__title',
+      pin: true,
+      markers: true
     });
 
-    gsap.to('.punchcutter__white--fill', {
+    // scroll h chapter 1
+    const tlH = gsap.timeline({
       scrollTrigger: {
         trigger: '.chapter1__content--aetna',
         start: 'top top',
         markers: true
-      },
+      }
+    });
+
+    tlH.to('.punchcutter__white--fill', {
       height: 1500,
-      duration: 6});
+      duration: 6
+    });
+
   }
+};
+
+const initTransitions = () => {
+
+  // animation mouse
+  const tlMouse = gsap.timeline({repeat: 3});
+  tlMouse.to('.mouse', {y: - 40, duration: 1})
+    .set('.mouse__dot', {fill: '#1dff00'}, 0.5)
+    .set('.mouse__dot', {fill: 'none'}, 2)
+    .to('.mouse', {y: 0, duration: 2});
+
 };
 
 export const init = () => {
@@ -183,11 +203,8 @@ export const init = () => {
   resizeWindow();
   window.addEventListener('resize', resizeWindow);
   $header.style.position = 'fixed';
-
+  initTransitions();
   initScrollTrigger();
-
-
-
   getLetters();
 };
 
