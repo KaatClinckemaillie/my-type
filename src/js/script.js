@@ -15,9 +15,6 @@ const amountNeededCells = 67; // grid of 7 x 1", so 91 cells, 24 cells are alrea
 //prologue
 const $prologue = document.querySelector('.prologue');
 
-//chapters
-const $chapters = document.querySelector('.chapters');
-
 const letters = [];
 
 const $buttomLink1 = document.querySelector('.interaction__link--1');
@@ -331,7 +328,7 @@ export const init = () => {
   $buttomLink3.addEventListener('click', showPart3);
 
   navigationItems.forEach($item => {
-    $item.addEventListener('click', closeNavigation)
+    $item.addEventListener('click', closeNavigation);
   });
   initTransitions();
   initScrollTrigger();
